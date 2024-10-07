@@ -48,23 +48,22 @@
             comboBoxCategory.FormattingEnabled = true;
             comboBoxCategory.Location = new Point(12, 31);
             comboBoxCategory.Name = "comboBoxCategory";
-            comboBoxCategory.Size = new Size(151, 23);
+            comboBoxCategory.Size = new Size(151, 28);
             comboBoxCategory.TabIndex = 2;
             // 
             // textBoxSearch
             // 
             textBoxSearch.Location = new Point(12, 79);
             textBoxSearch.Name = "textBoxSearch";
-            textBoxSearch.Size = new Size(446, 23);
+            textBoxSearch.Size = new Size(446, 27);
             textBoxSearch.TabIndex = 3;
             // 
             // listBoxResult
             // 
             listBoxResult.FormattingEnabled = true;
-            listBoxResult.ItemHeight = 15;
             listBoxResult.Location = new Point(12, 119);
             listBoxResult.Name = "listBoxResult";
-            listBoxResult.Size = new Size(546, 214);
+            listBoxResult.Size = new Size(546, 204);
             listBoxResult.TabIndex = 4;
             // 
             // buttonSearch
@@ -81,7 +80,7 @@
             // 
             textBoxRecipeTitle.Location = new Point(184, 31);
             textBoxRecipeTitle.Name = "textBoxRecipeTitle";
-            textBoxRecipeTitle.Size = new Size(374, 23);
+            textBoxRecipeTitle.Size = new Size(374, 27);
             textBoxRecipeTitle.TabIndex = 6;
             // 
             // buttonLogIn
@@ -98,14 +97,14 @@
             // 
             textBoxUser.Location = new Point(674, 32);
             textBoxUser.Name = "textBoxUser";
-            textBoxUser.Size = new Size(125, 23);
+            textBoxUser.Size = new Size(125, 27);
             textBoxUser.TabIndex = 8;
             // 
             // textBoxPassword
             // 
             textBoxPassword.Location = new Point(674, 76);
             textBoxPassword.Name = "textBoxPassword";
-            textBoxPassword.Size = new Size(125, 23);
+            textBoxPassword.Size = new Size(125, 27);
             textBoxPassword.TabIndex = 9;
             textBoxPassword.UseSystemPasswordChar = true;
             // 
@@ -114,7 +113,7 @@
             labelUsername.AutoSize = true;
             labelUsername.Location = new Point(588, 35);
             labelUsername.Name = "labelUsername";
-            labelUsername.Size = new Size(67, 15);
+            labelUsername.Size = new Size(83, 20);
             labelUsername.TabIndex = 10;
             labelUsername.Text = "Användare:";
             // 
@@ -123,7 +122,7 @@
             labelPassword.AutoSize = true;
             labelPassword.Location = new Point(598, 79);
             labelPassword.Name = "labelPassword";
-            labelPassword.Size = new Size(59, 15);
+            labelPassword.Size = new Size(73, 20);
             labelPassword.TabIndex = 11;
             labelPassword.Text = "Lösenord:";
             // 
@@ -135,7 +134,6 @@
             textBoxIngredients.ReadOnly = true;
             textBoxIngredients.Size = new Size(546, 264);
             textBoxIngredients.TabIndex = 12;
-            textBoxIngredients.Text = "7";
             // 
             // labelLogin
             // 
@@ -143,7 +141,7 @@
             labelLogin.Location = new Point(598, 119);
             labelLogin.Margin = new Padding(2, 0, 2, 0);
             labelLogin.Name = "labelLogin";
-            labelLogin.Size = new Size(0, 15);
+            labelLogin.Size = new Size(0, 20);
             labelLogin.TabIndex = 13;
             // 
             // buttonSave
