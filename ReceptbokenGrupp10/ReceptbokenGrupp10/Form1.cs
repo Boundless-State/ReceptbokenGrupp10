@@ -1,11 +1,17 @@
+using ReceptbokenGrupp10.Classes;
+
 namespace ReceptbokenGrupp10
 {
     public partial class FormRecipe : Form
     {
+ 
+
         public FormRecipe()
         {
             InitializeComponent();
+           
         }
+
 
         private void buttonLogIn_Click(object sender, EventArgs e)
         { 
@@ -24,7 +30,7 @@ namespace ReceptbokenGrupp10
                 textBoxIngredients.ReadOnly = false;
                 buttonSave.Visible = true;
 
-                //här lägger vi in Visible = true p åsamtliga funktioner och knappar som ska visas när man är inloggad
+                //hï¿½r lï¿½gger vi in Visible = true p ï¿½samtliga funktioner och knappar som ska visas nï¿½r man ï¿½r inloggad
             }
             else
             {
@@ -33,5 +39,6 @@ namespace ReceptbokenGrupp10
             }
         }
        
+
     }
 }

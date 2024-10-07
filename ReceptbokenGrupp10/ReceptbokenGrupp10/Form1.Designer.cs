@@ -37,7 +37,7 @@
             textBoxUser = new TextBox();
             textBoxPassword = new TextBox();
             labelUsername = new Label();
-            label2 = new Label();
+            label = new Label();
             textBoxIngredients = new TextBox();
             labelLogin = new Label();
             buttonSave = new Button();
@@ -117,14 +117,14 @@
             labelUsername.TabIndex = 10;
             labelUsername.Text = "Användare:";
             // 
-            // label2
+            // label
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(598, 79);
-            label2.Name = "label2";
-            label2.Size = new Size(73, 20);
-            label2.TabIndex = 11;
-            label2.Text = "Lösenord:";
+            label.AutoSize = true;
+            label.Location = new Point(598, 79);
+            label.Name = "label";
+            label.Size = new Size(73, 20);
+            label.TabIndex = 11;
+            label.Text = "Lösenord:";
             // 
             // textBoxIngredients
             // 
@@ -134,20 +134,23 @@
             textBoxIngredients.ReadOnly = true;
             textBoxIngredients.Size = new Size(546, 264);
             textBoxIngredients.TabIndex = 12;
+            textBoxIngredients.Text = "7";
             // 
             // labelLogin
             // 
             labelLogin.AutoSize = true;
-            labelLogin.Location = new Point(598, 152);
+            labelLogin.Location = new Point(399, 101);
+            labelLogin.Margin = new Padding(2, 0, 2, 0);
             labelLogin.Name = "labelLogin";
             labelLogin.Size = new Size(0, 20);
             labelLogin.TabIndex = 13;
             // 
             // buttonSave
             // 
-            buttonSave.Location = new Point(577, 584);
+            buttonSave.Location = new Point(571, 582);
+            buttonSave.Margin = new Padding(2, 2, 2, 2);
             buttonSave.Name = "buttonSave";
-            buttonSave.Size = new Size(94, 29);
+            buttonSave.Size = new Size(100, 31);
             buttonSave.TabIndex = 14;
             buttonSave.Text = "Spara";
             buttonSave.UseVisualStyleBackColor = true;
@@ -157,11 +160,11 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(832, 633);
+            ClientSize = new Size(833, 652);
             Controls.Add(buttonSave);
             Controls.Add(labelLogin);
             Controls.Add(textBoxIngredients);
-            Controls.Add(label2);
+            Controls.Add(label);
             Controls.Add(labelUsername);
             Controls.Add(textBoxPassword);
             Controls.Add(textBoxUser);
@@ -187,7 +190,7 @@
         private TextBox textBoxUser;
         private TextBox textBoxPassword;
         private Label labelUsername;
-        private Label label2;
+        private Label label;
         private TextBox textBoxIngredients;
         private Label labelLogin;
         private Button buttonSave;
