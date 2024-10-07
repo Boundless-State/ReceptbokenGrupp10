@@ -8,5 +8,10 @@
     "title": "Soup with flavour",
     "description": "Ingredients:\n-Water\n-Stock cube\n\nPour water in pot, boil, add stock cube, serve.",
     "category": "Soup"
+  },
+  {
+    "title": "Steak and potatoes",
+    "description": "Ingredients:\n-Steak\n-Butter\n-Potatoes\nBBQ sauce\n\nCook steak in butter on medium-high heat until reaching desired colour. Boil potatoes until soft inside, testing periodically with a fork. Serve while warm.",
+    "category": "Meat"
   }
 ]
