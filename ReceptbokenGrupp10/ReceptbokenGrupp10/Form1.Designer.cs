@@ -38,7 +38,7 @@
             textBoxPassword = new TextBox();
             labelUsername = new Label();
             labelPassword = new Label();
-            textBoxIngredients = new TextBox();
+            textBoxRecipe = new TextBox();
             labelLogin = new Label();
             buttonSave = new Button();
             SuspendLayout();
@@ -130,14 +130,14 @@
             labelPassword.TabIndex = 11;
             labelPassword.Text = "Lösenord:";
             // 
-            // textBoxIngredients
+            // textBoxRecipe
             // 
-            textBoxIngredients.Location = new Point(269, 102);
-            textBoxIngredients.Multiline = true;
-            textBoxIngredients.Name = "textBoxIngredients";
-            textBoxIngredients.ReadOnly = true;
-            textBoxIngredients.Size = new Size(761, 419);
-            textBoxIngredients.TabIndex = 12;
+            textBoxRecipe.Location = new Point(269, 102);
+            textBoxRecipe.Multiline = true;
+            textBoxRecipe.Name = "textBoxRecipe";
+            textBoxRecipe.ReadOnly = true;
+            textBoxRecipe.Size = new Size(761, 419);
+            textBoxRecipe.TabIndex = 12;
             // 
             // labelLogin
             // 
@@ -164,7 +164,7 @@
             ClientSize = new Size(1042, 594);
             Controls.Add(buttonSave);
             Controls.Add(labelLogin);
-            Controls.Add(textBoxIngredients);
+            Controls.Add(textBoxRecipe);
             Controls.Add(labelPassword);
             Controls.Add(labelUsername);
             Controls.Add(textBoxPassword);
@@ -192,7 +192,7 @@
         private TextBox textBoxPassword;
         private Label labelUsername;
         private Label labelPassword;
-        private TextBox textBoxIngredients;
+        private TextBox textBoxRecipe;
         private Label labelLogin;
         private Button buttonSave;
     }

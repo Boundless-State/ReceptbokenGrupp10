@@ -37,7 +37,7 @@ namespace ReceptbokenGrupp10
             {
                 labelLogin.Text = "Inloggning lyckades!";
                 labelLogin.ForeColor = Color.Green;
-                textBoxIngredients.ReadOnly = false;
+                textBoxRecipe.ReadOnly = false;
                 buttonSave.Visible = true;
 
                 //h�r l�gger vi in Visible = true p �samtliga funktioner och knappar som ska visas n�r man �r inloggad
@@ -68,13 +68,13 @@ namespace ReceptbokenGrupp10
                 {
                     if (recipe.Title.ToLower().Contains(searchText.ToLower()))
                     {
-                        listBoxResult.Items.Add(recipe.Title);
+                        listBoxResult.Items.Add(recipe);
 
                     }
                 }
                 if (recipe.Category == searchCategory && recipe.Title.ToLower().Contains(searchText.ToLower()))
                 {
-                    listBoxResult.Items.Add(recipe.Title);
+                    listBoxResult.Items.Add(recipe);
                 }
 
             }
@@ -85,7 +85,8 @@ namespace ReceptbokenGrupp10
 
         private void listBoxResult_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            Recipe selectedRecipe = (Recipe)listBoxResult.SelectedItem;
+            textBoxRecipe.Text = selectedRecipe.Description;
         }
     }
 }
