@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ReceptbokenGrupp10.Classes
 {
-    internal class FIlehandler
+    public class Filehandler
     {
     }
 }
