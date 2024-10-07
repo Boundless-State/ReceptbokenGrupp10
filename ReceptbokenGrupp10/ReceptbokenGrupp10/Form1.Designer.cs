@@ -39,6 +39,7 @@
             labelUsername = new Label();
             label2 = new Label();
             textBoxIngredients = new TextBox();
+            labelLogin = new Label();
             SuspendLayout();
             // 
             // comboBoxCategory
@@ -88,6 +89,7 @@
             buttonLogIn.TabIndex = 7;
             buttonLogIn.Text = "Logga in";
             buttonLogIn.UseVisualStyleBackColor = true;
+            buttonLogIn.Click += buttonLogIn_Click;
             // 
             // textBoxUser
             // 
@@ -100,8 +102,10 @@
             // 
             textBoxPassword.Location = new Point(674, 76);
             textBoxPassword.Name = "textBoxPassword";
+            textBoxPassword.PasswordChar = '*';
             textBoxPassword.Size = new Size(125, 27);
             textBoxPassword.TabIndex = 9;
+            textBoxPassword.UseSystemPasswordChar = true;
             // 
             // labelUsername
             // 
@@ -130,11 +134,20 @@
             textBoxIngredients.Size = new Size(546, 264);
             textBoxIngredients.TabIndex = 12;
             // 
+            // labelLogin
+            // 
+            labelLogin.AutoSize = true;
+            labelLogin.Location = new Point(598, 152);
+            labelLogin.Name = "labelLogin";
+            labelLogin.Size = new Size(0, 20);
+            labelLogin.TabIndex = 13;
+            // 
             // FormRecipe
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(832, 633);
+            Controls.Add(labelLogin);
             Controls.Add(textBoxIngredients);
             Controls.Add(label2);
             Controls.Add(labelUsername);
@@ -164,5 +177,6 @@
         private Label labelUsername;
         private Label label2;
         private TextBox textBoxIngredients;
+        private Label labelLogin;
     }
 }
