@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             labelTitle = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            textBoxTitle = new TextBox();
+            textBoxRecipe = new TextBox();
             labelDescription = new Label();
             labelCategory = new Label();
-            comboBox1 = new ComboBox();
+            comboBoxCategory = new ComboBox();
+            buttonSave = new Button();
             SuspendLayout();
             // 
             // labelTitle
@@ -43,62 +44,74 @@
             labelTitle.Name = "labelTitle";
             labelTitle.Size = new Size(38, 20);
             labelTitle.TabIndex = 0;
-            labelTitle.Text = "Title";
+            labelTitle.Text = "Titel";
             // 
-            // textBox1
+            // textBoxTitle
             // 
-            textBox1.Location = new Point(37, 49);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(407, 27);
-            textBox1.TabIndex = 1;
+            textBoxTitle.Location = new Point(37, 49);
+            textBoxTitle.Name = "textBoxTitle";
+            textBoxTitle.PlaceholderText = "Titel";
+            textBoxTitle.Size = new Size(407, 27);
+            textBoxTitle.TabIndex = 1;
             // 
-            // textBox2
+            // textBoxRecipe
             // 
-            textBox2.Location = new Point(37, 138);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(582, 339);
-            textBox2.TabIndex = 3;
+            textBoxRecipe.Location = new Point(37, 138);
+            textBoxRecipe.Multiline = true;
+            textBoxRecipe.Name = "textBoxRecipe";
+            textBoxRecipe.PlaceholderText = "Skriv recept här...";
+            textBoxRecipe.Size = new Size(582, 339);
+            textBoxRecipe.TabIndex = 3;
             // 
             // labelDescription
             // 
             labelDescription.AutoSize = true;
             labelDescription.Location = new Point(37, 115);
             labelDescription.Name = "labelDescription";
-            labelDescription.Size = new Size(57, 20);
+            labelDescription.Size = new Size(58, 20);
             labelDescription.TabIndex = 2;
-            labelDescription.Text = "Recipe:";
+            labelDescription.Text = "Recept:";
             // 
             // labelCategory
             // 
             labelCategory.AutoSize = true;
             labelCategory.Location = new Point(468, 25);
             labelCategory.Name = "labelCategory";
-            labelCategory.Size = new Size(69, 20);
+            labelCategory.Size = new Size(66, 20);
             labelCategory.TabIndex = 4;
-            labelCategory.Text = "Category";
+            labelCategory.Text = "Kategori";
             // 
-            // comboBox1
+            // comboBoxCategory
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(468, 48);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 5;
+            comboBoxCategory.FormattingEnabled = true;
+            comboBoxCategory.Location = new Point(468, 48);
+            comboBoxCategory.Name = "comboBoxCategory";
+            comboBoxCategory.Size = new Size(151, 28);
+            comboBoxCategory.TabIndex = 5;
+            // 
+            // buttonSave
+            // 
+            buttonSave.Location = new Point(525, 500);
+            buttonSave.Name = "buttonSave";
+            buttonSave.Size = new Size(94, 29);
+            buttonSave.TabIndex = 6;
+            buttonSave.Text = "Spara";
+            buttonSave.UseVisualStyleBackColor = true;
             // 
             // FormNewRecipe
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(646, 575);
-            Controls.Add(comboBox1);
+            ClientSize = new Size(646, 554);
+            Controls.Add(buttonSave);
+            Controls.Add(comboBoxCategory);
             Controls.Add(labelCategory);
-            Controls.Add(textBox2);
+            Controls.Add(textBoxRecipe);
             Controls.Add(labelDescription);
-            Controls.Add(textBox1);
+            Controls.Add(textBoxTitle);
             Controls.Add(labelTitle);
             Name = "FormNewRecipe";
-            Text = "FormNewRecipe";
+            Text = "Nytt recept";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -106,10 +119,11 @@
         #endregion
 
         private Label labelTitle;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox textBoxTitle;
+        private TextBox textBoxRecipe;
         private Label labelDescription;
         private Label labelCategory;
-        private ComboBox comboBox1;
+        private ComboBox comboBoxCategory;
+        private Button buttonSave;
     }
 }
