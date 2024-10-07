@@ -5,7 +5,7 @@ namespace ReceptbokenGrupp10.Classes
     public class Filehandler
     {
 
-        string filePath = @"C:\Users\JeJAZ\Source\Repos\ReceptbokenGrupp10\ReceptbokenGrupp10\ReceptbokenGrupp10\Resources\Recipes.json";
+        string filePath = @"C:\Users\marcu\source\repos\ProgCSharp\ReceptbokenGrupp10\ReceptbokenGrupp10\ReceptbokenGrupp10\Resources\Recipes.json";
 
 
         private readonly string _FilePath;

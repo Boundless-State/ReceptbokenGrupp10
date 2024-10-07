@@ -48,27 +48,29 @@
             comboBoxCategory.FormattingEnabled = true;
             comboBoxCategory.Location = new Point(12, 31);
             comboBoxCategory.Name = "comboBoxCategory";
-            comboBoxCategory.Size = new Size(151, 28);
+            comboBoxCategory.Size = new Size(225, 28);
             comboBoxCategory.TabIndex = 2;
             // 
             // textBoxSearch
             // 
-            textBoxSearch.Location = new Point(12, 79);
+            textBoxSearch.Location = new Point(12, 74);
             textBoxSearch.Name = "textBoxSearch";
-            textBoxSearch.Size = new Size(446, 27);
+            textBoxSearch.PlaceholderText = "Sök";
+            textBoxSearch.Size = new Size(225, 27);
             textBoxSearch.TabIndex = 3;
             // 
             // listBoxResult
             // 
             listBoxResult.FormattingEnabled = true;
-            listBoxResult.Location = new Point(12, 119);
+            listBoxResult.Location = new Point(12, 171);
             listBoxResult.Name = "listBoxResult";
-            listBoxResult.Size = new Size(546, 204);
+            listBoxResult.Size = new Size(225, 364);
             listBoxResult.TabIndex = 4;
+            listBoxResult.SelectedIndexChanged += listBoxResult_SelectedIndexChanged;
             // 
             // buttonSearch
             // 
-            buttonSearch.Location = new Point(464, 79);
+            buttonSearch.Location = new Point(12, 125);
             buttonSearch.Name = "buttonSearch";
             buttonSearch.Size = new Size(94, 29);
             buttonSearch.TabIndex = 5;
@@ -78,14 +80,16 @@
             // 
             // textBoxRecipeTitle
             // 
-            textBoxRecipeTitle.Location = new Point(184, 31);
+            textBoxRecipeTitle.Font = new Font("Segoe UI", 14F);
+            textBoxRecipeTitle.Location = new Point(269, 31);
             textBoxRecipeTitle.Name = "textBoxRecipeTitle";
-            textBoxRecipeTitle.Size = new Size(374, 27);
+            textBoxRecipeTitle.PlaceholderText = "Titel";
+            textBoxRecipeTitle.Size = new Size(374, 39);
             textBoxRecipeTitle.TabIndex = 6;
             // 
             // buttonLogIn
             // 
-            buttonLogIn.Location = new Point(705, 119);
+            buttonLogIn.Location = new Point(936, 19);
             buttonLogIn.Name = "buttonLogIn";
             buttonLogIn.Size = new Size(94, 29);
             buttonLogIn.TabIndex = 7;
@@ -95,14 +99,14 @@
             // 
             // textBoxUser
             // 
-            textBoxUser.Location = new Point(674, 32);
+            textBoxUser.Location = new Point(777, 16);
             textBoxUser.Name = "textBoxUser";
             textBoxUser.Size = new Size(125, 27);
             textBoxUser.TabIndex = 8;
             // 
             // textBoxPassword
             // 
-            textBoxPassword.Location = new Point(674, 76);
+            textBoxPassword.Location = new Point(777, 60);
             textBoxPassword.Name = "textBoxPassword";
             textBoxPassword.Size = new Size(125, 27);
             textBoxPassword.TabIndex = 9;
@@ -111,7 +115,7 @@
             // labelUsername
             // 
             labelUsername.AutoSize = true;
-            labelUsername.Location = new Point(588, 35);
+            labelUsername.Location = new Point(691, 19);
             labelUsername.Name = "labelUsername";
             labelUsername.Size = new Size(83, 20);
             labelUsername.TabIndex = 10;
@@ -120,7 +124,7 @@
             // labelPassword
             // 
             labelPassword.AutoSize = true;
-            labelPassword.Location = new Point(598, 79);
+            labelPassword.Location = new Point(701, 63);
             labelPassword.Name = "labelPassword";
             labelPassword.Size = new Size(73, 20);
             labelPassword.TabIndex = 11;
@@ -128,17 +132,17 @@
             // 
             // textBoxIngredients
             // 
-            textBoxIngredients.Location = new Point(12, 349);
+            textBoxIngredients.Location = new Point(269, 102);
             textBoxIngredients.Multiline = true;
             textBoxIngredients.Name = "textBoxIngredients";
             textBoxIngredients.ReadOnly = true;
-            textBoxIngredients.Size = new Size(546, 264);
+            textBoxIngredients.Size = new Size(761, 419);
             textBoxIngredients.TabIndex = 12;
             // 
             // labelLogin
             // 
             labelLogin.AutoSize = true;
-            labelLogin.Location = new Point(598, 119);
+            labelLogin.Location = new Point(936, 63);
             labelLogin.Margin = new Padding(2, 0, 2, 0);
             labelLogin.Name = "labelLogin";
             labelLogin.Size = new Size(0, 20);
@@ -146,7 +150,7 @@
             // 
             // buttonSave
             // 
-            buttonSave.Location = new Point(571, 582);
+            buttonSave.Location = new Point(930, 544);
             buttonSave.Margin = new Padding(2);
             buttonSave.Name = "buttonSave";
             buttonSave.Size = new Size(100, 31);
@@ -157,7 +161,7 @@
             // 
             // FormRecipe
             // 
-            ClientSize = new Size(832, 633);
+            ClientSize = new Size(1042, 594);
             Controls.Add(buttonSave);
             Controls.Add(labelLogin);
             Controls.Add(textBoxIngredients);

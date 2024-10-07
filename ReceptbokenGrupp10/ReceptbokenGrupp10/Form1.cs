@@ -10,8 +10,8 @@ namespace ReceptbokenGrupp10
         public FormRecipe()
         {
             InitializeComponent();
-            
-            
+
+
             recipeList = filehandler.ReadAllRecepies();
             string[] categories = { "Kött", "Fisk", "Sallad", "Soppa", "Dessert" };
 
@@ -79,7 +79,12 @@ namespace ReceptbokenGrupp10
 
             }
 
-            
+
+
+        }
+
+        private void listBoxResult_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }
