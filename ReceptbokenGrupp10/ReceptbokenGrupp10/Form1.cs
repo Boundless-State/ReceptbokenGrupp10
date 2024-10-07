@@ -21,6 +21,9 @@ namespace ReceptbokenGrupp10
             {
                 labelLogin.Text = "Inloggning lyckades!";
                 labelLogin.ForeColor = Color.Green;
+                textBoxIngredients.ReadOnly = false;
+                buttonSave.Visible = true;
+
                 //här lägger vi in Visible = true p åsamtliga funktioner och knappar som ska visas när man är inloggad
             }
             else

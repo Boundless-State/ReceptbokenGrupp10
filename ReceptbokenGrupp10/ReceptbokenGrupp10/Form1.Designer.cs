@@ -40,6 +40,7 @@
             label2 = new Label();
             textBoxIngredients = new TextBox();
             labelLogin = new Label();
+            buttonSave = new Button();
             SuspendLayout();
             // 
             // comboBoxCategory
@@ -142,11 +143,22 @@
             labelLogin.Size = new Size(0, 20);
             labelLogin.TabIndex = 13;
             // 
+            // buttonSave
+            // 
+            buttonSave.Location = new Point(577, 584);
+            buttonSave.Name = "buttonSave";
+            buttonSave.Size = new Size(94, 29);
+            buttonSave.TabIndex = 14;
+            buttonSave.Text = "Spara";
+            buttonSave.UseVisualStyleBackColor = true;
+            buttonSave.Visible = false;
+            // 
             // FormRecipe
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(832, 633);
+            Controls.Add(buttonSave);
             Controls.Add(labelLogin);
             Controls.Add(textBoxIngredients);
             Controls.Add(label2);
@@ -178,5 +190,6 @@
         private Label label2;
         private TextBox textBoxIngredients;
         private Label labelLogin;
+        private Button buttonSave;
     }
 }
