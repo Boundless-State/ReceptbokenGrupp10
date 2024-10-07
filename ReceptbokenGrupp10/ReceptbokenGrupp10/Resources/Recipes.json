@@ -1,17 +1,17 @@
 [
   {
-    "title": "Soup",
-    "description": "Ingredients:\n-Water\n\nPour water in pot, boil, serve.",
-    "category": "Soup"
+    "title": "Soppa",
+    "description": "Ingredienser:\n-Vatten\n\nHäll vatten i en kastrull. Koka. Servera.",
+    "category": "Soppa"
   },
   {
-    "title": "Soup with flavour",
-    "description": "Ingredients:\n-Water\n-Stock cube\n\nPour water in pot, boil, add stock cube, serve.",
-    "category": "Soup"
+    "title": "Soppa med smak",
+    "description": "Ingredienser:\n-Vatten\n-Buljongkub\n\nHäll vatten i en kastrull, koka, lägg till buljong, servera.",
+    "category": "Soppa"
   },
   {
-    "title": "Soup with flavour",
-    "description": "Ingredients:\n-Steak\n-Butter\n-Potatoes\nBBQ sauce\n\nCook steak in butter on medium-high heat until reaching desired colour. Boil potatoes until soft inside, testing periodically with a fork. Serve while warm.",
-    "category": "Meat"
+    "title": "Kött och potatis",
+    "description": "Ingredienser:\n-Kött\n-Smör\n-Potatis\n\nStek köttet i smör på medelhög värme tills det når din önskade färg. Koka potatis tills de är mjuka inuti. Servera med smör.",
+    "category": "Kött"
   }
 ]
