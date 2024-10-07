@@ -6,11 +6,26 @@ using System.Threading.Tasks;
 
 namespace ReceptbokenGrupp10.Classes
 {
-    internal class Recipe
+    public class Recipe
     {
         public string Title { get; set; }
         public string Description { get; set; }
         public string Category { get; set; }
+
+        public void Create(string title, string description, string category)
+        {
+
+        }
+
+        public void Update(string title, string description, string category)
+        {
+
+        }
+
+        public void Delete()
+        {
+
+        }
 
     }
 }
