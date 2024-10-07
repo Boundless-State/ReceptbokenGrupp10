@@ -54,6 +54,8 @@ namespace ReceptbokenGrupp10
             string searchText = textBoxSearch.Text;
             string searchCategory = comboBoxCategory.Text;
 
+            listBoxResult.Items.Clear();
+
             if (textBoxSearch.Text == null)
             {
                 textBoxSearch.Text = "";
@@ -62,9 +64,17 @@ namespace ReceptbokenGrupp10
 
             foreach (Recipe recipe in recipeList)
             {
-                if (recipe.Category == searchCategory || recipe.Title.ToLower().Contains(searchText.ToLower()))
+                if (searchCategory == "")
                 {
-                    listBoxResult.Items.Add(recipe);
+                    if (recipe.Title.ToLower().Contains(searchText.ToLower()))
+                    {
+                        listBoxResult.Items.Add(recipe.Title);
+
+                    }
+                }
+                if (recipe.Category == searchCategory && recipe.Title.ToLower().Contains(searchText.ToLower()))
+                {
+                    listBoxResult.Items.Add(recipe.Title);
                 }
 
             }

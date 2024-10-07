@@ -1,17 +1,17 @@
 [
   {
-    "title": "Soppa",
-    "description": "Ingredienser:\n-Vatten\n\nHäll vatten i en kastrull. Koka. Servera.",
-    "category": "Soppa"
+    "Title": "Soppa",
+    "Description": "Ingredienser:\n-Vatten\n\nHäll vatten i en kastrull. Koka. Servera.",
+    "Category": "Soppa"
   },
   {
-    "title": "Soppa med smak",
-    "description": "Ingredienser:\n-Vatten\n-Buljongkub\n\nHäll vatten i en kastrull, koka, lägg till buljong, servera.",
-    "category": "Soppa"
+    "Title": "Soppa med smak",
+    "Description": "Ingredienser:\n-Vatten\n-Buljongkub\n\nHäll vatten i en kastrull, koka, lägg till buljong, servera.",
+    "Category": "Soppa"
   },
   {
-    "title": "Kött och potatis",
-    "description": "Ingredienser:\n-Kött\n-Smör\n-Potatis\n\nStek köttet i smör på medelhög värme tills det når din önskade färg. Koka potatis tills de är mjuka inuti. Servera med smör.",
-    "category": "Kött"
+    "Title": "Kött och potatis",
+    "Description": "Ingredienser:\n-Kött\n-Smör\n-Potatis\n\nStek köttet i smör på medelhög värme tills det når din önskade färg. Koka potatis tills de är mjuka inuti. Servera med smör.",
+    "Category": "Kött"
   }
 ]

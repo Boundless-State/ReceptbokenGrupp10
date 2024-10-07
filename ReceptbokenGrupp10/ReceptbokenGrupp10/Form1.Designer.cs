@@ -37,7 +37,7 @@
             textBoxUser = new TextBox();
             textBoxPassword = new TextBox();
             labelUsername = new Label();
-            label = new Label();
+            labelPassword = new Label();
             textBoxIngredients = new TextBox();
             labelLogin = new Label();
             buttonSave = new Button();
@@ -118,14 +118,14 @@
             labelUsername.TabIndex = 10;
             labelUsername.Text = "Användare:";
             // 
-            // label
+            // labelPassword
             // 
-            label.AutoSize = true;
-            label.Location = new Point(598, 79);
-            label.Name = "label";
-            label.Size = new Size(59, 15);
-            label.TabIndex = 11;
-            label.Text = "Lösenord:";
+            labelPassword.AutoSize = true;
+            labelPassword.Location = new Point(598, 79);
+            labelPassword.Name = "labelPassword";
+            labelPassword.Size = new Size(59, 15);
+            labelPassword.TabIndex = 11;
+            labelPassword.Text = "Lösenord:";
             // 
             // textBoxIngredients
             // 
@@ -140,7 +140,7 @@
             // labelLogin
             // 
             labelLogin.AutoSize = true;
-            labelLogin.Location = new Point(399, 101);
+            labelLogin.Location = new Point(598, 119);
             labelLogin.Margin = new Padding(2, 0, 2, 0);
             labelLogin.Name = "labelLogin";
             labelLogin.Size = new Size(0, 15);
@@ -163,7 +163,7 @@
             Controls.Add(buttonSave);
             Controls.Add(labelLogin);
             Controls.Add(textBoxIngredients);
-            Controls.Add(label);
+            Controls.Add(labelPassword);
             Controls.Add(labelUsername);
             Controls.Add(textBoxPassword);
             Controls.Add(textBoxUser);
@@ -189,7 +189,7 @@
         private TextBox textBoxUser;
         private TextBox textBoxPassword;
         private Label labelUsername;
-        private Label label;
+        private Label labelPassword;
         private TextBox textBoxIngredients;
         private Label labelLogin;
         private Button buttonSave;
