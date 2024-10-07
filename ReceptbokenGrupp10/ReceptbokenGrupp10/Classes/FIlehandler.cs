@@ -5,10 +5,15 @@ namespace ReceptbokenGrupp10.Classes
     public class Filehandler
     {
 
-        string filePath = @"C:\Users\Toby\source\repos\ReceptbokenGrupp10\ReceptbokenGrupp10\ReceptbokenGrupp10\Resources\Recipes.json";
+        string filePath = @"C:\Users\JeJAZ\Source\Repos\ReceptbokenGrupp10\ReceptbokenGrupp10\ReceptbokenGrupp10\Resources\Recipes.json";
 
 
         private readonly string _FilePath;
+
+        public Filehandler()
+        {
+
+        }
         public Filehandler(string filePath)
         {
             _FilePath = filePath;
@@ -41,7 +46,7 @@ namespace ReceptbokenGrupp10.Classes
 
             try
             {
-                using (StreamReader Reader = new StreamReader(_FilePath))
+                using (StreamReader Reader = new StreamReader(filePath))
                 {
                     string jsonString = Reader.ReadToEnd();
                     return JsonSerializer.Deserialize<List<Recipe>>(jsonString);
