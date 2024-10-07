@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Soup",
+    "ingrediants": [ "water" ],
+    "description": "Pour water in pot, boil, serve.",
+    "category": "Soup"
+  },
+  {
+    "title": "Soup with flavour",
+    "ingredients": [ "water", "stock cube" ],
+    "description": "Pour water in pot, boil, add stock cube, serve.",
+    "category": "Soup"
+  }
+]
