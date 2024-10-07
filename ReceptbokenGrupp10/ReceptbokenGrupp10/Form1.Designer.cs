@@ -1,6 +1,6 @@
 ﻿namespace ReceptbokenGrupp10
 {
-    partial class Form1
+    partial class FormRecipe
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            listBoxIngredients = new ListBox();
-            listBoxRecipe = new ListBox();
             comboBoxCategory = new ComboBox();
             textBoxSearch = new TextBox();
             listBoxResult = new ListBox();
@@ -42,22 +40,6 @@
             label2 = new Label();
             textBoxIngredients = new TextBox();
             SuspendLayout();
-            // 
-            // listBoxIngredients
-            // 
-            listBoxIngredients.FormattingEnabled = true;
-            listBoxIngredients.Location = new Point(736, 330);
-            listBoxIngredients.Name = "listBoxIngredients";
-            listBoxIngredients.Size = new Size(268, 264);
-            listBoxIngredients.TabIndex = 0;
-            // 
-            // listBoxRecipe
-            // 
-            listBoxRecipe.FormattingEnabled = true;
-            listBoxRecipe.Location = new Point(12, 349);
-            listBoxRecipe.Name = "listBoxRecipe";
-            listBoxRecipe.Size = new Size(272, 264);
-            listBoxRecipe.TabIndex = 1;
             // 
             // comboBoxCategory
             // 
@@ -100,7 +82,7 @@
             // 
             // buttonLogIn
             // 
-            buttonLogIn.Location = new Point(976, 122);
+            buttonLogIn.Location = new Point(705, 119);
             buttonLogIn.Name = "buttonLogIn";
             buttonLogIn.Size = new Size(94, 29);
             buttonLogIn.TabIndex = 7;
@@ -109,14 +91,14 @@
             // 
             // textBoxUser
             // 
-            textBoxUser.Location = new Point(945, 35);
+            textBoxUser.Location = new Point(674, 32);
             textBoxUser.Name = "textBoxUser";
             textBoxUser.Size = new Size(125, 27);
             textBoxUser.TabIndex = 8;
             // 
             // textBoxPassword
             // 
-            textBoxPassword.Location = new Point(945, 79);
+            textBoxPassword.Location = new Point(674, 76);
             textBoxPassword.Name = "textBoxPassword";
             textBoxPassword.Size = new Size(125, 27);
             textBoxPassword.TabIndex = 9;
@@ -124,7 +106,7 @@
             // labelUsername
             // 
             labelUsername.AutoSize = true;
-            labelUsername.Location = new Point(859, 38);
+            labelUsername.Location = new Point(588, 35);
             labelUsername.Name = "labelUsername";
             labelUsername.Size = new Size(83, 20);
             labelUsername.TabIndex = 10;
@@ -133,7 +115,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(869, 82);
+            label2.Location = new Point(598, 79);
             label2.Name = "label2";
             label2.Size = new Size(73, 20);
             label2.TabIndex = 11;
@@ -141,18 +123,18 @@
             // 
             // textBoxIngredients
             // 
-            textBoxIngredients.Location = new Point(313, 349);
+            textBoxIngredients.Location = new Point(12, 349);
             textBoxIngredients.Multiline = true;
             textBoxIngredients.Name = "textBoxIngredients";
             textBoxIngredients.ReadOnly = true;
-            textBoxIngredients.Size = new Size(245, 264);
+            textBoxIngredients.Size = new Size(546, 264);
             textBoxIngredients.TabIndex = 12;
             // 
-            // Form1
+            // FormRecipe
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1102, 633);
+            ClientSize = new Size(832, 633);
             Controls.Add(textBoxIngredients);
             Controls.Add(label2);
             Controls.Add(labelUsername);
@@ -164,18 +146,13 @@
             Controls.Add(listBoxResult);
             Controls.Add(textBoxSearch);
             Controls.Add(comboBoxCategory);
-            Controls.Add(listBoxRecipe);
-            Controls.Add(listBoxIngredients);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "FormRecipe";
+            Text = "Receptboken";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private ListBox listBoxIngredients;
-        private ListBox listBoxRecipe;
         private ComboBox comboBoxCategory;
         private TextBox textBoxSearch;
         private ListBox listBoxResult;

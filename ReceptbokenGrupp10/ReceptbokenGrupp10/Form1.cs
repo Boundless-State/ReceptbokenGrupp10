@@ -1,8 +1,8 @@
 namespace ReceptbokenGrupp10
 {
-    public partial class Form1 : Form
+    public partial class FormRecipe : Form
     {
-        public Form1()
+        public FormRecipe()
         {
             InitializeComponent();
         }
