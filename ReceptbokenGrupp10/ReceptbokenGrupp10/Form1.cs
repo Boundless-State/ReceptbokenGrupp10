@@ -86,6 +86,7 @@ namespace ReceptbokenGrupp10
         private void listBoxResult_SelectedIndexChanged(object sender, EventArgs e)
         {
             Recipe selectedRecipe = (Recipe)listBoxResult.SelectedItem;
+            textBoxRecipeTitle.Text = selectedRecipe.Title;
             textBoxRecipe.Text = selectedRecipe.Description;
         }
     }
