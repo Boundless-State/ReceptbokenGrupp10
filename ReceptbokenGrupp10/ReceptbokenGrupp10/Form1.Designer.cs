@@ -103,8 +103,14 @@
             // 
             textBoxPassword.Location = new Point(674, 76);
             textBoxPassword.Name = "textBoxPassword";
-            textBoxPassword.PasswordChar = '*';
+            
+            textBoxPassword.Size = new Size(186, 35);
+
+            textBoxPassword.Size = new Size(186, 35);
+
+            
             textBoxPassword.Size = new Size(125, 27);
+            
             textBoxPassword.TabIndex = 9;
             textBoxPassword.UseSystemPasswordChar = true;
             // 
@@ -158,11 +164,17 @@
             // 
             // FormRecipe
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(833, 652);
+
+            ClientSize = new Size(1248, 950);
+
+            ClientSize = new Size(832, 633);
+
+            ClientSize = new Size(1248, 950);
+
+            ClientSize = new Size(832, 633);
             Controls.Add(buttonSave);
             Controls.Add(labelLogin);
+
             Controls.Add(textBoxIngredients);
             Controls.Add(label);
             Controls.Add(labelUsername);
