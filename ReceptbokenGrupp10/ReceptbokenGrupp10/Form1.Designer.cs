@@ -48,22 +48,23 @@
             comboBoxCategory.FormattingEnabled = true;
             comboBoxCategory.Location = new Point(12, 31);
             comboBoxCategory.Name = "comboBoxCategory";
-            comboBoxCategory.Size = new Size(151, 28);
+            comboBoxCategory.Size = new Size(151, 23);
             comboBoxCategory.TabIndex = 2;
             // 
             // textBoxSearch
             // 
             textBoxSearch.Location = new Point(12, 79);
             textBoxSearch.Name = "textBoxSearch";
-            textBoxSearch.Size = new Size(446, 27);
+            textBoxSearch.Size = new Size(446, 23);
             textBoxSearch.TabIndex = 3;
             // 
             // listBoxResult
             // 
             listBoxResult.FormattingEnabled = true;
+            listBoxResult.ItemHeight = 15;
             listBoxResult.Location = new Point(12, 119);
             listBoxResult.Name = "listBoxResult";
-            listBoxResult.Size = new Size(546, 224);
+            listBoxResult.Size = new Size(546, 214);
             listBoxResult.TabIndex = 4;
             // 
             // buttonSearch
@@ -74,12 +75,13 @@
             buttonSearch.TabIndex = 5;
             buttonSearch.Text = "Sök";
             buttonSearch.UseVisualStyleBackColor = true;
+            buttonSearch.Click += buttonSearch_Click;
             // 
             // textBoxRecipeTitle
             // 
             textBoxRecipeTitle.Location = new Point(184, 31);
             textBoxRecipeTitle.Name = "textBoxRecipeTitle";
-            textBoxRecipeTitle.Size = new Size(374, 27);
+            textBoxRecipeTitle.Size = new Size(374, 23);
             textBoxRecipeTitle.TabIndex = 6;
             // 
             // buttonLogIn
@@ -96,21 +98,14 @@
             // 
             textBoxUser.Location = new Point(674, 32);
             textBoxUser.Name = "textBoxUser";
-            textBoxUser.Size = new Size(125, 27);
+            textBoxUser.Size = new Size(125, 23);
             textBoxUser.TabIndex = 8;
             // 
             // textBoxPassword
             // 
             textBoxPassword.Location = new Point(674, 76);
             textBoxPassword.Name = "textBoxPassword";
-            
-            textBoxPassword.Size = new Size(186, 35);
-
-            textBoxPassword.Size = new Size(186, 35);
-
-            
-            textBoxPassword.Size = new Size(125, 27);
-            
+            textBoxPassword.Size = new Size(125, 23);
             textBoxPassword.TabIndex = 9;
             textBoxPassword.UseSystemPasswordChar = true;
             // 
@@ -119,7 +114,7 @@
             labelUsername.AutoSize = true;
             labelUsername.Location = new Point(588, 35);
             labelUsername.Name = "labelUsername";
-            labelUsername.Size = new Size(83, 20);
+            labelUsername.Size = new Size(67, 15);
             labelUsername.TabIndex = 10;
             labelUsername.Text = "Användare:";
             // 
@@ -128,7 +123,7 @@
             label.AutoSize = true;
             label.Location = new Point(598, 79);
             label.Name = "label";
-            label.Size = new Size(73, 20);
+            label.Size = new Size(59, 15);
             label.TabIndex = 11;
             label.Text = "Lösenord:";
             // 
@@ -148,13 +143,13 @@
             labelLogin.Location = new Point(399, 101);
             labelLogin.Margin = new Padding(2, 0, 2, 0);
             labelLogin.Name = "labelLogin";
-            labelLogin.Size = new Size(0, 20);
+            labelLogin.Size = new Size(0, 15);
             labelLogin.TabIndex = 13;
             // 
             // buttonSave
             // 
             buttonSave.Location = new Point(571, 582);
-            buttonSave.Margin = new Padding(2, 2, 2, 2);
+            buttonSave.Margin = new Padding(2);
             buttonSave.Name = "buttonSave";
             buttonSave.Size = new Size(100, 31);
             buttonSave.TabIndex = 14;
@@ -164,17 +159,9 @@
             // 
             // FormRecipe
             // 
-
-            ClientSize = new Size(1248, 950);
-
-            ClientSize = new Size(832, 633);
-
-            ClientSize = new Size(1248, 950);
-
             ClientSize = new Size(832, 633);
             Controls.Add(buttonSave);
             Controls.Add(labelLogin);
-
             Controls.Add(textBoxIngredients);
             Controls.Add(label);
             Controls.Add(labelUsername);
