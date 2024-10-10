@@ -29,5 +29,11 @@ namespace ReceptbokenGrupp10
             }
 
         }
+
+        public FormNewRecipe(List <Recipe> recipeList, string[] categories) 
+        {
+            InitializeComponent();
+
+        }
     }
 }

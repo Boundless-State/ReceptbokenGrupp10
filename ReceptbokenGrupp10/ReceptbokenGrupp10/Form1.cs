@@ -100,14 +100,16 @@ namespace ReceptbokenGrupp10
 
         private void buttonNewRecipe_Click(object sender, EventArgs e)
         {
-
+            Recipe selectedRecipe = (Recipe)listBoxResult.SelectedItem;
+            FormNewRecipe newRecipe = new FormNewRecipe(recipeList, categories);
+            newRecipe.ShowDialog();
         }
 
         private void buttonEditRecipe_Click(object sender, EventArgs e)
         {
             Recipe selectedRecipe = (Recipe)listBoxResult.SelectedItem;
             FormNewRecipe editRecipe = new FormNewRecipe(selectedRecipe, recipeList, categories);
-            editRecipe.Show();
+            editRecipe.ShowDialog();
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
