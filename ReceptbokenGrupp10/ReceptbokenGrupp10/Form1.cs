@@ -95,7 +95,6 @@ namespace ReceptbokenGrupp10
                 textBoxRecipe.Text = selectedRecipe.Description;
                 buttonEditRecipe.Enabled = true;
                 buttonDeleteRecipe.Enabled = true;
-
             }
             catch (Exception ex)
             {
