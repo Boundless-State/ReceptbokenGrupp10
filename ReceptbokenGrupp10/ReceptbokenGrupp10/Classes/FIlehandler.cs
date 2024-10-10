@@ -7,7 +7,7 @@ namespace ReceptbokenGrupp10.Classes
         ErrorLogger errorLogger;
 
         //string filePath = @"C:\Users\marcu\source\repos\ProgCSharp\ReceptbokenGrupp10\ReceptbokenGrupp10\ReceptbokenGrupp10\Resources\Recipes.json";
-        string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\Resources\Recipes");
+        string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\Resources\Recipes.Json");
 
         private readonly string _FilePath;
 

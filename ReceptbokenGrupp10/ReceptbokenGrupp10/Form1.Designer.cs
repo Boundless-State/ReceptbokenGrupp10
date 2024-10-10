@@ -37,7 +37,6 @@
             textBoxPassword = new TextBox();
             labelUsername = new Label();
             labelPassword = new Label();
-            textBoxRecipe = new TextBox();
             labelLogin = new Label();
 
             textBoxRecipe = new RichTextBox();
@@ -198,9 +197,7 @@
             Controls.Add(buttonEditRecipe);
             Controls.Add(buttonNewRecipe);
             Controls.Add(textBoxRecipe);
-
             Controls.Add(labelLogin);
-            Controls.Add(textBoxRecipe);
             Controls.Add(labelPassword);
             Controls.Add(labelUsername);
             Controls.Add(textBoxPassword);
@@ -226,9 +223,7 @@
         private TextBox textBoxPassword;
         private Label labelUsername;
         private Label labelPassword;
-        private TextBox textBoxRecipe;
         private Label labelLogin;
-
         private Button buttonEditRecipe;
         private Button buttonClose;
         private RichTextBox textBoxRecipe;
