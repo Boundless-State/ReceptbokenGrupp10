@@ -1,17 +1,27 @@
 [
   {
     "Title": "Soppa",
-    "Description": "Ingredienser:\n-Vatten\n\nHäll vatten i en kastrull. Koka. Servera.",
+    "Description": "Ingredienser:\n-Vatten\n\nH\u00E4ll vatten i en kastrull. Koka. Servera.",
     "Category": "Soppa"
   },
   {
     "Title": "Soppa med smak",
-    "Description": "Ingredienser:\n-Vatten\n-Buljongkub\n\nHäll vatten i en kastrull, koka, lägg till buljong, servera.",
+    "Description": "Ingredienser:\n-Vatten\n-Buljongkub\n\nH\u00E4ll vatten i en kastrull, koka, l\u00E4gg till buljong, servera.",
     "Category": "Soppa"
   },
   {
-    "Title": "Kött och potatis",
-    "Description": "Ingredienser:\n-Kött\n-Smör\n-Potatis\n\nStek köttet i smör på medelhög värme tills det når din önskade färg. Koka potatis tills de är mjuka inuti. Servera med smör.",
-    "Category": "Kött"
+    "Title": "K\u00F6tt och potatis",
+    "Description": "Ingredienser:\n-K\u00F6tt\n-Sm\u00F6r\n-Potatis\n\nStek k\u00F6ttet i sm\u00F6r p\u00E5 medelh\u00F6g v\u00E4rme tills det n\u00E5r din \u00F6nskade f\u00E4rg. Koka potatis tills de \u00E4r mjuka inuti. Servera med sm\u00F6r.",
+    "Category": "K\u00F6tt"
+  },
+  {
+    "Title": "K\u00F6ttbullar med korv",
+    "Description": "L\u00E4gg k\u00F6ttbullarna p\u00E5 korven.",
+    "Category": "K\u00F6tt"
+  },
+  {
+    "Title": "Hej",
+    "Description": "Hej\n\nP\u00E5\n\nDig",
+    "Category": "Sallad"
   }
 ]

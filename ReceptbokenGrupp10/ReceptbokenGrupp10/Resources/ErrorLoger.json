@@ -8,5 +8,35 @@
     "Message": "Could not find file \u0027C:\\Users\\marcu\\source\\repos\\ProgCSharp\\ReceptbokenGrupp10\\ReceptbokenGrupp10\\ReceptbokenGrupp10\\Resources\\Recipes\u0027.",
     "StackTrace": "   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)\r\n   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable\u00601 unixCreateMode)\r\n   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable\u00601 unixCreateMode)\r\n   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable\u00601 unixCreateMode)\r\n   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)\r\n   at System.IO.StreamReader..ctor(String path)\r\n   at ReceptbokenGrupp10.Classes.Filehandler.ReadAllRecepies() in C:\\Users\\marcu\\source\\repos\\ProgCSharp\\ReceptbokenGrupp10\\ReceptbokenGrupp10\\ReceptbokenGrupp10\\Classes\\FIlehandler.cs:line 55",
     "Timestamp": "2024-10-10T13:38:22.7871187+02:00"
+  },
+  {
+    "Message": "Value cannot be null. (Parameter \u0027path\u0027)",
+    "StackTrace": "   at System.ArgumentNullException.Throw(String paramName)\r\n   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)\r\n   at System.ArgumentException.ThrowNullOrEmptyException(String argument, String paramName)\r\n   at System.IO.StreamWriter.ValidateArgsAndOpenPath(String path, Boolean append, Encoding encoding, Int32 bufferSize)\r\n   at System.IO.StreamWriter..ctor(String path, Boolean append)\r\n   at ReceptbokenGrupp10.Classes.Filehandler.WriteToFile(List\u00601 recipes) in C:\\Users\\JeJAZ\\Source\\Repos\\ReceptbokenGrupp10\\ReceptbokenGrupp10\\ReceptbokenGrupp10\\Classes\\FIlehandler.cs:line 34",
+    "Timestamp": "2024-10-10T14:27:43.3108935+02:00"
+  },
+  {
+    "Message": "Value cannot be null. (Parameter \u0027path\u0027)",
+    "StackTrace": "   at System.ArgumentNullException.Throw(String paramName)\r\n   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)\r\n   at System.ArgumentException.ThrowNullOrEmptyException(String argument, String paramName)\r\n   at System.IO.StreamWriter.ValidateArgsAndOpenPath(String path, Boolean append, Encoding encoding, Int32 bufferSize)\r\n   at System.IO.StreamWriter..ctor(String path, Boolean append)\r\n   at ReceptbokenGrupp10.Classes.Filehandler.WriteToFile(List\u00601 recipes) in C:\\Users\\JeJAZ\\Source\\Repos\\ReceptbokenGrupp10\\ReceptbokenGrupp10\\ReceptbokenGrupp10\\Classes\\FIlehandler.cs:line 34",
+    "Timestamp": "2024-10-10T14:27:44.0502524+02:00"
+  },
+  {
+    "Message": "Value cannot be null. (Parameter \u0027path\u0027)",
+    "StackTrace": "   at System.ArgumentNullException.Throw(String paramName)\r\n   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)\r\n   at System.ArgumentException.ThrowNullOrEmptyException(String argument, String paramName)\r\n   at System.IO.StreamWriter.ValidateArgsAndOpenPath(String path, Boolean append, Encoding encoding, Int32 bufferSize)\r\n   at System.IO.StreamWriter..ctor(String path, Boolean append)\r\n   at ReceptbokenGrupp10.Classes.Filehandler.WriteToFile(List\u00601 recipes) in C:\\Users\\JeJAZ\\Source\\Repos\\ReceptbokenGrupp10\\ReceptbokenGrupp10\\ReceptbokenGrupp10\\Classes\\FIlehandler.cs:line 34",
+    "Timestamp": "2024-10-10T14:27:44.2010418+02:00"
+  },
+  {
+    "Message": "Value cannot be null. (Parameter \u0027path\u0027)",
+    "StackTrace": "   at System.ArgumentNullException.Throw(String paramName)\r\n   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)\r\n   at System.ArgumentException.ThrowNullOrEmptyException(String argument, String paramName)\r\n   at System.IO.StreamWriter.ValidateArgsAndOpenPath(String path, Boolean append, Encoding encoding, Int32 bufferSize)\r\n   at System.IO.StreamWriter..ctor(String path, Boolean append)\r\n   at ReceptbokenGrupp10.Classes.Filehandler.WriteToFile(List\u00601 recipes) in C:\\Users\\JeJAZ\\Source\\Repos\\ReceptbokenGrupp10\\ReceptbokenGrupp10\\ReceptbokenGrupp10\\Classes\\FIlehandler.cs:line 34",
+    "Timestamp": "2024-10-10T14:27:44.3545087+02:00"
+  },
+  {
+    "Message": "Value cannot be null. (Parameter \u0027path\u0027)",
+    "StackTrace": "   at System.ArgumentNullException.Throw(String paramName)\r\n   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)\r\n   at System.ArgumentException.ThrowNullOrEmptyException(String argument, String paramName)\r\n   at System.IO.StreamWriter.ValidateArgsAndOpenPath(String path, Boolean append, Encoding encoding, Int32 bufferSize)\r\n   at System.IO.StreamWriter..ctor(String path, Boolean append)\r\n   at ReceptbokenGrupp10.Classes.Filehandler.WriteToFile(List\u00601 recipes) in C:\\Users\\JeJAZ\\Source\\Repos\\ReceptbokenGrupp10\\ReceptbokenGrupp10\\ReceptbokenGrupp10\\Classes\\FIlehandler.cs:line 34",
+    "Timestamp": "2024-10-10T14:27:44.4666793+02:00"
+  },
+  {
+    "Message": "Value cannot be null. (Parameter \u0027path\u0027)",
+    "StackTrace": "   at System.ArgumentNullException.Throw(String paramName)\r\n   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)\r\n   at System.ArgumentException.ThrowNullOrEmptyException(String argument, String paramName)\r\n   at System.IO.StreamWriter.ValidateArgsAndOpenPath(String path, Boolean append, Encoding encoding, Int32 bufferSize)\r\n   at System.IO.StreamWriter..ctor(String path, Boolean append)\r\n   at ReceptbokenGrupp10.Classes.Filehandler.WriteToFile(List\u00601 recipes) in C:\\Users\\JeJAZ\\Source\\Repos\\ReceptbokenGrupp10\\ReceptbokenGrupp10\\ReceptbokenGrupp10\\Classes\\FIlehandler.cs:line 34",
+    "Timestamp": "2024-10-10T14:34:45.7844258+02:00"
   }
 ]
