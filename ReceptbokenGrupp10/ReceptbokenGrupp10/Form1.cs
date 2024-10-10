@@ -89,8 +89,11 @@ namespace ReceptbokenGrupp10
             try
             {
                 Recipe selectedRecipe = (Recipe)listBoxResult.SelectedItem;
+                
                 textBoxRecipeTitle.Text = selectedRecipe.Title;
                 textBoxRecipe.Text = selectedRecipe.Description;
+                buttonEditRecipe.Enabled = true;
+                
             }
             catch (Exception ex)
             {
