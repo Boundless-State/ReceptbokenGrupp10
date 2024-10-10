@@ -207,7 +207,6 @@
         private Label labelUsername;
         private Label labelPassword;
         private Label labelLogin;
-        private Button buttonSave;
         private Button buttonEditRecipe;
         private Button buttonClose;
         private RichTextBox textBoxRecipe;
