@@ -38,9 +38,9 @@
             textBoxPassword = new TextBox();
             labelUsername = new Label();
             labelPassword = new Label();
+            textBoxRecipe = new TextBox();
             labelLogin = new Label();
             buttonSave = new Button();
-            textBoxRecipe = new RichTextBox();
             SuspendLayout();
             // 
             // comboBoxCategory
@@ -48,7 +48,7 @@
             comboBoxCategory.FormattingEnabled = true;
             comboBoxCategory.Location = new Point(12, 31);
             comboBoxCategory.Name = "comboBoxCategory";
-            comboBoxCategory.Size = new Size(225, 28);
+            comboBoxCategory.Size = new Size(225, 38);
             comboBoxCategory.TabIndex = 2;
             // 
             // textBoxSearch
@@ -56,12 +56,13 @@
             textBoxSearch.Location = new Point(12, 74);
             textBoxSearch.Name = "textBoxSearch";
             textBoxSearch.PlaceholderText = "Sök";
-            textBoxSearch.Size = new Size(225, 27);
+            textBoxSearch.Size = new Size(225, 35);
             textBoxSearch.TabIndex = 3;
             // 
             // listBoxResult
             // 
             listBoxResult.FormattingEnabled = true;
+            listBoxResult.ItemHeight = 30;
             listBoxResult.Location = new Point(12, 171);
             listBoxResult.Name = "listBoxResult";
             listBoxResult.Size = new Size(225, 364);
@@ -84,7 +85,7 @@
             textBoxRecipeTitle.Location = new Point(269, 31);
             textBoxRecipeTitle.Name = "textBoxRecipeTitle";
             textBoxRecipeTitle.PlaceholderText = "Titel";
-            textBoxRecipeTitle.Size = new Size(374, 39);
+            textBoxRecipeTitle.Size = new Size(374, 51);
             textBoxRecipeTitle.TabIndex = 6;
             // 
             // buttonLogIn
@@ -101,14 +102,14 @@
             // 
             textBoxUser.Location = new Point(777, 16);
             textBoxUser.Name = "textBoxUser";
-            textBoxUser.Size = new Size(125, 27);
+            textBoxUser.Size = new Size(125, 35);
             textBoxUser.TabIndex = 8;
             // 
             // textBoxPassword
             // 
             textBoxPassword.Location = new Point(777, 60);
             textBoxPassword.Name = "textBoxPassword";
-            textBoxPassword.Size = new Size(125, 27);
+            textBoxPassword.Size = new Size(125, 35);
             textBoxPassword.TabIndex = 9;
             textBoxPassword.UseSystemPasswordChar = true;
             // 
@@ -117,7 +118,7 @@
             labelUsername.AutoSize = true;
             labelUsername.Location = new Point(691, 19);
             labelUsername.Name = "labelUsername";
-            labelUsername.Size = new Size(83, 20);
+            labelUsername.Size = new Size(118, 30);
             labelUsername.TabIndex = 10;
             labelUsername.Text = "Användare:";
             // 
@@ -126,9 +127,18 @@
             labelPassword.AutoSize = true;
             labelPassword.Location = new Point(701, 63);
             labelPassword.Name = "labelPassword";
-            labelPassword.Size = new Size(73, 20);
+            labelPassword.Size = new Size(103, 30);
             labelPassword.TabIndex = 11;
             labelPassword.Text = "Lösenord:";
+            // 
+            // textBoxRecipe
+            // 
+            textBoxRecipe.Location = new Point(269, 102);
+            textBoxRecipe.Multiline = true;
+            textBoxRecipe.Name = "textBoxRecipe";
+            textBoxRecipe.ReadOnly = true;
+            textBoxRecipe.Size = new Size(761, 419);
+            textBoxRecipe.TabIndex = 12;
             // 
             // labelLogin
             // 
@@ -136,7 +146,7 @@
             labelLogin.Location = new Point(936, 63);
             labelLogin.Margin = new Padding(2, 0, 2, 0);
             labelLogin.Name = "labelLogin";
-            labelLogin.Size = new Size(0, 20);
+            labelLogin.Size = new Size(0, 30);
             labelLogin.TabIndex = 13;
             // 
             // buttonSave
@@ -149,22 +159,14 @@
             buttonSave.Text = "Spara";
             buttonSave.UseVisualStyleBackColor = true;
             buttonSave.Visible = false;
-            // 
-            // textBoxRecipe
-            // 
-            textBoxRecipe.Location = new Point(269, 125);
-            textBoxRecipe.Name = "textBoxRecipe";
-            textBoxRecipe.ReadOnly = true;
-            textBoxRecipe.Size = new Size(761, 410);
-            textBoxRecipe.TabIndex = 15;
-            textBoxRecipe.Text = "";
+            
             // 
             // FormRecipe
             // 
             ClientSize = new Size(1042, 594);
-            Controls.Add(textBoxRecipe);
             Controls.Add(buttonSave);
             Controls.Add(labelLogin);
+            Controls.Add(textBoxRecipe);
             Controls.Add(labelPassword);
             Controls.Add(labelUsername);
             Controls.Add(textBoxPassword);
@@ -192,8 +194,8 @@
         private TextBox textBoxPassword;
         private Label labelUsername;
         private Label labelPassword;
+        private TextBox textBoxRecipe;
         private Label labelLogin;
         private Button buttonSave;
-        private RichTextBox textBoxRecipe;
     }
 }

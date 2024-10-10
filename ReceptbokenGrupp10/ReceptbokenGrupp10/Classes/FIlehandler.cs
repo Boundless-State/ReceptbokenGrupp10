@@ -4,19 +4,23 @@ namespace ReceptbokenGrupp10.Classes
 {
     public class Filehandler
     {
+        ErrorLogger errorLogger;
 
         //string filePath = @"C:\Users\marcu\source\repos\ProgCSharp\ReceptbokenGrupp10\ReceptbokenGrupp10\ReceptbokenGrupp10\Resources\Recipes.json";
-        string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\Resources\Recipes.json");
+        string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\Resources\Recipes");
 
         private readonly string _FilePath;
 
         public Filehandler()
         {
-
+            errorLogger = new ErrorLogger();
+          
         }
         public Filehandler(string filePath)
         {
+
             _FilePath = filePath;
+            errorLogger = new ErrorLogger();
         }
 
 
@@ -35,7 +39,9 @@ namespace ReceptbokenGrupp10.Classes
             catch (Exception ex)
             {
 
-                Console.WriteLine($"Error writing to the json file {ex.Message}");
+                Console.WriteLine($"Error writing to the JSON file: {ex.Message}");
+                errorLogger.LogCustomError(ex);
+
             }
 
 
@@ -56,7 +62,9 @@ namespace ReceptbokenGrupp10.Classes
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error" + ex.Message );
+                
+                Console.WriteLine($"Error reading from the JSON file: {ex.Message}");
+                errorLogger.LogCustomError(ex);
                 throw;
 
             }
