@@ -64,6 +64,7 @@ namespace ReceptbokenGrupp10
             _recipeList.Add(newRecipe);
             filehandler.WriteToFile(_recipeList);
 
+            this.Close();
         }
     }
 }
