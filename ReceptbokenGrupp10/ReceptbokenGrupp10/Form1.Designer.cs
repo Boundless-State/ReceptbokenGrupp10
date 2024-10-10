@@ -38,11 +38,10 @@
             labelUsername = new Label();
             labelPassword = new Label();
             labelLogin = new Label();
-
+            textBoxRecipe = new RichTextBox();
             buttonNewRecipe = new Button();
             buttonEditRecipe = new Button();
             buttonClose = new Button();
-
             SuspendLayout();
             // 
             // comboBoxCategory
@@ -50,7 +49,7 @@
             comboBoxCategory.FormattingEnabled = true;
             comboBoxCategory.Location = new Point(12, 31);
             comboBoxCategory.Name = "comboBoxCategory";
-            comboBoxCategory.Size = new Size(225, 28);
+            comboBoxCategory.Size = new Size(225, 33);
             comboBoxCategory.TabIndex = 2;
             comboBoxCategory.SelectedIndexChanged += comboBoxCategory_SelectedIndexChanged;
             // 
@@ -59,13 +58,14 @@
             textBoxSearch.Location = new Point(12, 74);
             textBoxSearch.Name = "textBoxSearch";
             textBoxSearch.PlaceholderText = "Sök";
-            textBoxSearch.Size = new Size(225, 27);
+            textBoxSearch.Size = new Size(225, 31);
             textBoxSearch.TabIndex = 3;
             textBoxSearch.TextChanged += textBoxSearch_TextChanged;
             // 
             // listBoxResult
             // 
             listBoxResult.FormattingEnabled = true;
+            listBoxResult.ItemHeight = 25;
             listBoxResult.Location = new Point(12, 131);
             listBoxResult.Name = "listBoxResult";
             listBoxResult.Size = new Size(225, 404);
@@ -79,7 +79,7 @@
             textBoxRecipeTitle.Location = new Point(269, 31);
             textBoxRecipeTitle.Name = "textBoxRecipeTitle";
             textBoxRecipeTitle.PlaceholderText = "Titel";
-            textBoxRecipeTitle.Size = new Size(374, 39);
+            textBoxRecipeTitle.Size = new Size(374, 45);
             textBoxRecipeTitle.TabIndex = 6;
             // 
             // buttonLogIn
@@ -96,14 +96,14 @@
             // 
             textBoxUser.Location = new Point(777, 16);
             textBoxUser.Name = "textBoxUser";
-            textBoxUser.Size = new Size(125, 27);
+            textBoxUser.Size = new Size(125, 31);
             textBoxUser.TabIndex = 8;
             // 
             // textBoxPassword
             // 
             textBoxPassword.Location = new Point(777, 60);
             textBoxPassword.Name = "textBoxPassword";
-            textBoxPassword.Size = new Size(125, 27);
+            textBoxPassword.Size = new Size(125, 31);
             textBoxPassword.TabIndex = 9;
             textBoxPassword.UseSystemPasswordChar = true;
             // 
@@ -112,7 +112,7 @@
             labelUsername.AutoSize = true;
             labelUsername.Location = new Point(691, 19);
             labelUsername.Name = "labelUsername";
-            labelUsername.Size = new Size(83, 20);
+            labelUsername.Size = new Size(101, 25);
             labelUsername.TabIndex = 10;
             labelUsername.Text = "Användare:";
             // 
@@ -121,7 +121,7 @@
             labelPassword.AutoSize = true;
             labelPassword.Location = new Point(701, 63);
             labelPassword.Name = "labelPassword";
-            labelPassword.Size = new Size(73, 20);
+            labelPassword.Size = new Size(90, 25);
             labelPassword.TabIndex = 11;
             labelPassword.Text = "Lösenord:";
             // 
@@ -131,8 +131,16 @@
             labelLogin.Location = new Point(907, 67);
             labelLogin.Margin = new Padding(2, 0, 2, 0);
             labelLogin.Name = "labelLogin";
-            labelLogin.Size = new Size(0, 20);
+            labelLogin.Size = new Size(0, 25);
             labelLogin.TabIndex = 13;
+            // 
+            // textBoxRecipe
+            // 
+            textBoxRecipe.Location = new Point(287, 131);
+            textBoxRecipe.Name = "textBoxRecipe";
+            textBoxRecipe.Size = new Size(708, 404);
+            textBoxRecipe.TabIndex = 17;
+            textBoxRecipe.Text = "";
             // 
             // buttonNewRecipe
             // 
@@ -166,12 +174,10 @@
             buttonClose.Text = "Stäng";
             buttonClose.UseVisualStyleBackColor = true;
             buttonClose.Click += buttonClose_Click;
-       
             // 
             // FormRecipe
             // 
             ClientSize = new Size(1042, 594);
-
             Controls.Add(buttonClose);
             Controls.Add(buttonEditRecipe);
             Controls.Add(buttonNewRecipe);
