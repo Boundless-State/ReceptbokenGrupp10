@@ -166,15 +166,7 @@
             buttonClose.Text = "Stäng";
             buttonClose.UseVisualStyleBackColor = true;
             buttonClose.Click += buttonClose_Click;
-            // 
-            // textBoxRecipe
-            // 
-            textBoxRecipe.Location = new Point(269, 125);
-            textBoxRecipe.Name = "textBoxRecipe";
-            textBoxRecipe.ReadOnly = true;
-            textBoxRecipe.Size = new Size(761, 410);
-            textBoxRecipe.TabIndex = 15;
-            textBoxRecipe.Text = "";
+       
             // 
             // FormRecipe
             // 
