@@ -31,7 +31,7 @@ namespace ReceptbokenGrupp10.Classes
             {
                 string jsonString = JsonSerializer.Serialize(recipes);
 
-                using (StreamWriter writer = new StreamWriter(_FilePath, false))
+                using (StreamWriter writer = new StreamWriter(filePath, false))
                 {
                     writer.WriteLine(jsonString);
                 }
