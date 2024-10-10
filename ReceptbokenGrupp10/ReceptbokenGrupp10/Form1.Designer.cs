@@ -38,11 +38,8 @@
             labelUsername = new Label();
             labelPassword = new Label();
             labelLogin = new Label();
-
-            buttonNewRecipe = new Button();
-            buttonEditRecipe = new Button();
-            buttonClose = new Button();
-
+            buttonSave = new Button();
+            textBoxRecipe = new RichTextBox();
             SuspendLayout();
             // 
             // comboBoxCategory
@@ -74,7 +71,6 @@
             // 
             // textBoxRecipeTitle
             // 
-            textBoxRecipeTitle.Enabled = false;
             textBoxRecipeTitle.Font = new Font("Segoe UI", 14F);
             textBoxRecipeTitle.Location = new Point(269, 31);
             textBoxRecipeTitle.Name = "textBoxRecipeTitle";
@@ -84,7 +80,7 @@
             // 
             // buttonLogIn
             // 
-            buttonLogIn.Location = new Point(936, 16);
+            buttonLogIn.Location = new Point(936, 19);
             buttonLogIn.Name = "buttonLogIn";
             buttonLogIn.Size = new Size(94, 29);
             buttonLogIn.TabIndex = 7;
@@ -128,44 +124,22 @@
             // labelLogin
             // 
             labelLogin.AutoSize = true;
-            labelLogin.Location = new Point(907, 67);
+            labelLogin.Location = new Point(936, 63);
             labelLogin.Margin = new Padding(2, 0, 2, 0);
             labelLogin.Name = "labelLogin";
             labelLogin.Size = new Size(0, 20);
             labelLogin.TabIndex = 13;
             // 
-            // buttonNewRecipe
+            // buttonSave
             // 
-            buttonNewRecipe.Location = new Point(620, 541);
-            buttonNewRecipe.Margin = new Padding(2);
-            buttonNewRecipe.Name = "buttonNewRecipe";
-            buttonNewRecipe.Size = new Size(133, 31);
-            buttonNewRecipe.TabIndex = 14;
-            buttonNewRecipe.Text = "Nytt Recept";
-            buttonNewRecipe.UseVisualStyleBackColor = true;
-            buttonNewRecipe.Visible = false;
-            buttonNewRecipe.Click += buttonNewRecipe_Click;
-            // 
-            // buttonEditRecipe
-            // 
-            buttonEditRecipe.Location = new Point(758, 542);
-            buttonEditRecipe.Name = "buttonEditRecipe";
-            buttonEditRecipe.Size = new Size(133, 29);
-            buttonEditRecipe.TabIndex = 15;
-            buttonEditRecipe.Text = "Redigera Recept";
-            buttonEditRecipe.UseVisualStyleBackColor = true;
-            buttonEditRecipe.Visible = false;
-            buttonEditRecipe.Click += buttonEditRecipe_Click;
-            // 
-            // buttonClose
-            // 
-            buttonClose.Location = new Point(897, 542);
-            buttonClose.Name = "buttonClose";
-            buttonClose.Size = new Size(133, 29);
-            buttonClose.TabIndex = 16;
-            buttonClose.Text = "Stäng";
-            buttonClose.UseVisualStyleBackColor = true;
-            buttonClose.Click += buttonClose_Click;
+            buttonSave.Location = new Point(930, 544);
+            buttonSave.Margin = new Padding(2);
+            buttonSave.Name = "buttonSave";
+            buttonSave.Size = new Size(100, 31);
+            buttonSave.TabIndex = 14;
+            buttonSave.Text = "Spara";
+            buttonSave.UseVisualStyleBackColor = true;
+            buttonSave.Visible = false;
             // 
             // textBoxRecipe
             // 
@@ -179,11 +153,8 @@
             // FormRecipe
             // 
             ClientSize = new Size(1042, 594);
-
-            Controls.Add(buttonClose);
-            Controls.Add(buttonEditRecipe);
-            Controls.Add(buttonNewRecipe);
             Controls.Add(textBoxRecipe);
+            Controls.Add(buttonSave);
             Controls.Add(labelLogin);
             Controls.Add(labelPassword);
             Controls.Add(labelUsername);
@@ -211,9 +182,7 @@
         private Label labelUsername;
         private Label labelPassword;
         private Label labelLogin;
-        private Button buttonNewRecipe;
-        private Button buttonEditRecipe;
-        private Button buttonClose;
+        private Button buttonSave;
         private RichTextBox textBoxRecipe;
     }
 }
