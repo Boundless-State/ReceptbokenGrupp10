@@ -31,18 +31,18 @@
             comboBoxCategory = new ComboBox();
             textBoxSearch = new TextBox();
             listBoxResult = new ListBox();
-            buttonSearch = new Button();
             textBoxRecipeTitle = new TextBox();
             buttonLogIn = new Button();
             textBoxUser = new TextBox();
             textBoxPassword = new TextBox();
             labelUsername = new Label();
             labelPassword = new Label();
-            textBoxRecipe = new TextBox();
             labelLogin = new Label();
+
             buttonNewRecipe = new Button();
             buttonEditRecipe = new Button();
             buttonClose = new Button();
+
             SuspendLayout();
             // 
             // comboBoxCategory
@@ -52,6 +52,7 @@
             comboBoxCategory.Name = "comboBoxCategory";
             comboBoxCategory.Size = new Size(225, 28);
             comboBoxCategory.TabIndex = 2;
+            comboBoxCategory.SelectedIndexChanged += comboBoxCategory_SelectedIndexChanged;
             // 
             // textBoxSearch
             // 
@@ -60,25 +61,16 @@
             textBoxSearch.PlaceholderText = "Sök";
             textBoxSearch.Size = new Size(225, 27);
             textBoxSearch.TabIndex = 3;
+            textBoxSearch.TextChanged += textBoxSearch_TextChanged;
             // 
             // listBoxResult
             // 
             listBoxResult.FormattingEnabled = true;
-            listBoxResult.Location = new Point(12, 171);
+            listBoxResult.Location = new Point(12, 131);
             listBoxResult.Name = "listBoxResult";
-            listBoxResult.Size = new Size(225, 364);
+            listBoxResult.Size = new Size(225, 404);
             listBoxResult.TabIndex = 4;
             listBoxResult.SelectedIndexChanged += listBoxResult_SelectedIndexChanged;
-            // 
-            // buttonSearch
-            // 
-            buttonSearch.Location = new Point(12, 125);
-            buttonSearch.Name = "buttonSearch";
-            buttonSearch.Size = new Size(94, 29);
-            buttonSearch.TabIndex = 5;
-            buttonSearch.Text = "Sök";
-            buttonSearch.UseVisualStyleBackColor = true;
-            buttonSearch.Click += buttonSearch_Click;
             // 
             // textBoxRecipeTitle
             // 
@@ -133,15 +125,6 @@
             labelPassword.TabIndex = 11;
             labelPassword.Text = "Lösenord:";
             // 
-            // textBoxRecipe
-            // 
-            textBoxRecipe.Location = new Point(269, 116);
-            textBoxRecipe.Multiline = true;
-            textBoxRecipe.Name = "textBoxRecipe";
-            textBoxRecipe.ReadOnly = true;
-            textBoxRecipe.Size = new Size(761, 419);
-            textBoxRecipe.TabIndex = 12;
-            // 
             // labelLogin
             // 
             labelLogin.AutoSize = true;
@@ -184,21 +167,30 @@
             buttonClose.UseVisualStyleBackColor = true;
             buttonClose.Click += buttonClose_Click;
             // 
+            // textBoxRecipe
+            // 
+            textBoxRecipe.Location = new Point(269, 125);
+            textBoxRecipe.Name = "textBoxRecipe";
+            textBoxRecipe.ReadOnly = true;
+            textBoxRecipe.Size = new Size(761, 410);
+            textBoxRecipe.TabIndex = 15;
+            textBoxRecipe.Text = "";
+            // 
             // FormRecipe
             // 
             ClientSize = new Size(1042, 594);
+
             Controls.Add(buttonClose);
             Controls.Add(buttonEditRecipe);
             Controls.Add(buttonNewRecipe);
-            Controls.Add(labelLogin);
             Controls.Add(textBoxRecipe);
+            Controls.Add(labelLogin);
             Controls.Add(labelPassword);
             Controls.Add(labelUsername);
             Controls.Add(textBoxPassword);
             Controls.Add(textBoxUser);
             Controls.Add(buttonLogIn);
             Controls.Add(textBoxRecipeTitle);
-            Controls.Add(buttonSearch);
             Controls.Add(listBoxResult);
             Controls.Add(textBoxSearch);
             Controls.Add(comboBoxCategory);
@@ -212,17 +204,16 @@
         private ComboBox comboBoxCategory;
         private TextBox textBoxSearch;
         private ListBox listBoxResult;
-        private Button buttonSearch;
         private TextBox textBoxRecipeTitle;
         private Button buttonLogIn;
         private TextBox textBoxUser;
         private TextBox textBoxPassword;
         private Label labelUsername;
         private Label labelPassword;
-        private TextBox textBoxRecipe;
         private Label labelLogin;
         private Button buttonNewRecipe;
         private Button buttonEditRecipe;
         private Button buttonClose;
+        private RichTextBox textBoxRecipe;
     }
 }
