@@ -194,7 +194,7 @@
             Controls.Add(textBoxSearch);
             Controls.Add(comboBoxCategory);
             Name = "FormRecipe";
-            Text = "Receptboken";
+            Text = "International Food AB - Recept";
             ResumeLayout(false);
             PerformLayout();
         }
