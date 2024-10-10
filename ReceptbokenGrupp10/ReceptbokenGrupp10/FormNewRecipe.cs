@@ -31,6 +31,8 @@ namespace ReceptbokenGrupp10
 
             }
 
+            recipeList.Remove(recipe);
+
 
 
 
