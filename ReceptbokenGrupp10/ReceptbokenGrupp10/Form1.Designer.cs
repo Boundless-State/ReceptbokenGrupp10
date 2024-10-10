@@ -42,6 +42,7 @@
             buttonNewRecipe = new Button();
             buttonEditRecipe = new Button();
             buttonClose = new Button();
+            buttonDeleteRecipe = new Button();
             SuspendLayout();
             // 
             // comboBoxCategory
@@ -144,7 +145,7 @@
             // 
             // buttonNewRecipe
             // 
-            buttonNewRecipe.Location = new Point(574, 541);
+            buttonNewRecipe.Location = new Point(437, 541);
             buttonNewRecipe.Margin = new Padding(2);
             buttonNewRecipe.Name = "buttonNewRecipe";
             buttonNewRecipe.Size = new Size(133, 31);
@@ -157,7 +158,7 @@
             // buttonEditRecipe
             // 
             buttonEditRecipe.Enabled = false;
-            buttonEditRecipe.Location = new Point(712, 542);
+            buttonEditRecipe.Location = new Point(575, 542);
             buttonEditRecipe.Name = "buttonEditRecipe";
             buttonEditRecipe.Size = new Size(133, 29);
             buttonEditRecipe.TabIndex = 15;
@@ -176,9 +177,23 @@
             buttonClose.UseVisualStyleBackColor = true;
             buttonClose.Click += buttonClose_Click;
             // 
+            // buttonDeleteRecipe
+            // 
+            buttonDeleteRecipe.Enabled = false;
+            buttonDeleteRecipe.Location = new Point(713, 541);
+            buttonDeleteRecipe.Margin = new Padding(2);
+            buttonDeleteRecipe.Name = "buttonDeleteRecipe";
+            buttonDeleteRecipe.Size = new Size(133, 31);
+            buttonDeleteRecipe.TabIndex = 18;
+            buttonDeleteRecipe.Text = "Ta Bort Recept";
+            buttonDeleteRecipe.UseVisualStyleBackColor = true;
+            buttonDeleteRecipe.Visible = false;
+            buttonDeleteRecipe.Click += buttonDeleteRecipe_Click;
+            // 
             // FormRecipe
             // 
             ClientSize = new Size(991, 594);
+            Controls.Add(buttonDeleteRecipe);
             Controls.Add(buttonClose);
             Controls.Add(buttonEditRecipe);
             Controls.Add(buttonNewRecipe);
@@ -214,6 +229,6 @@
         private Button buttonClose;
         private RichTextBox textBoxRecipe;
         private Button buttonNewRecipe;
-
+        private Button buttonDeleteRecipe;
     }
 }

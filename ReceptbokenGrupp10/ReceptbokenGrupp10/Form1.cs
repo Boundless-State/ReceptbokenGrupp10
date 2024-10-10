@@ -41,6 +41,7 @@ namespace ReceptbokenGrupp10
                 textBoxRecipe.ReadOnly = false;
                 buttonNewRecipe.Visible = true;
                 buttonEditRecipe.Visible = true;
+                buttonDeleteRecipe.Visible = true;
 
                 //h�r l�gger vi in Visible = true p �samtliga funktioner och knappar som ska visas n�r man �r inloggad
             }
@@ -89,11 +90,12 @@ namespace ReceptbokenGrupp10
             try
             {
                 Recipe selectedRecipe = (Recipe)listBoxResult.SelectedItem;
-                
+
                 textBoxRecipeTitle.Text = selectedRecipe.Title;
                 textBoxRecipe.Text = selectedRecipe.Description;
                 buttonEditRecipe.Enabled = true;
-                
+                buttonDeleteRecipe.Enabled = true;
+
             }
             catch (Exception ex)
             {
@@ -118,6 +120,37 @@ namespace ReceptbokenGrupp10
         private void buttonClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonDeleteRecipe_Click(object sender, EventArgs e)
+        {
+            
+            // Kontrollera att ett recept är valt i listBox
+            if (listBoxResult.SelectedItem != null)
+            {
+                
+                Recipe selectedRecipe = (Recipe)listBoxResult.SelectedItem;
+
+                
+                DialogResult dialogResult = MessageBox.Show(
+                    $"Är du säker på att du vill ta bort receptet '{selectedRecipe.Title}'?",
+                    "Bekräfta borttagning",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+
+                
+                if (dialogResult == DialogResult.Yes)
+                {
+                    
+                    recipeList.Remove(selectedRecipe);
+                    Filehandler filehandler = new Filehandler();
+                    filehandler.WriteToFile(recipeList);
+                    listBoxResult.Items.Remove(selectedRecipe);
+
+                    // Eventuell feedback till användaren om att borttagningen lyckades
+                    MessageBox.Show("Receptet har tagits bort.", "Borttagning klar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
     }
 }
