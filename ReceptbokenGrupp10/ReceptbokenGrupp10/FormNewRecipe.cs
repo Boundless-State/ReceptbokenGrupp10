@@ -1,5 +1,4 @@
-﻿using ReceptbokenGrupp10.Classes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,21 +12,9 @@ namespace ReceptbokenGrupp10
 {
     public partial class FormNewRecipe : Form
     {
-        public FormNewRecipe(Recipe newRecipe,List<Recipe> recipeList, string[] categories)
+        public FormNewRecipe()
         {
             InitializeComponent();
-            Recipe recipe = new Recipe();
-            recipe = newRecipe;
-            textBoxTitle.Text = recipe.Title;
-            textBoxRecipe.Text = recipe.Description;
-            comboBoxCategory.Text = recipe.Category;
-
-            foreach (string category in categories)
-            {
-                comboBoxCategory.Items.Add(category);
-                
-            }
-            
         }
     }
 }

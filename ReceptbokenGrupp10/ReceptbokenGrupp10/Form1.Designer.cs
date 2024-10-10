@@ -42,6 +42,7 @@
             buttonNewRecipe = new Button();
             buttonEditRecipe = new Button();
             buttonClose = new Button();
+
             SuspendLayout();
             // 
             // comboBoxCategory
@@ -74,7 +75,6 @@
             // 
             // textBoxRecipeTitle
             // 
-            textBoxRecipeTitle.Enabled = false;
             textBoxRecipeTitle.Font = new Font("Segoe UI", 14F);
             textBoxRecipeTitle.Location = new Point(269, 31);
             textBoxRecipeTitle.Name = "textBoxRecipeTitle";
@@ -84,7 +84,7 @@
             // 
             // buttonLogIn
             // 
-            buttonLogIn.Location = new Point(936, 16);
+            buttonLogIn.Location = new Point(936, 19);
             buttonLogIn.Name = "buttonLogIn";
             buttonLogIn.Size = new Size(94, 29);
             buttonLogIn.TabIndex = 7;
@@ -128,12 +128,13 @@
             // labelLogin
             // 
             labelLogin.AutoSize = true;
-            labelLogin.Location = new Point(907, 67);
+            labelLogin.Location = new Point(936, 63);
             labelLogin.Margin = new Padding(2, 0, 2, 0);
             labelLogin.Name = "labelLogin";
             labelLogin.Size = new Size(0, 25);
             labelLogin.TabIndex = 13;
             // 
+
             // textBoxRecipe
             // 
             textBoxRecipe.Location = new Point(287, 131);
@@ -174,14 +175,18 @@
             buttonClose.Text = "Stäng";
             buttonClose.UseVisualStyleBackColor = true;
             buttonClose.Click += buttonClose_Click;
+
             // 
             // FormRecipe
             // 
             ClientSize = new Size(1042, 594);
+
             Controls.Add(buttonClose);
             Controls.Add(buttonEditRecipe);
             Controls.Add(buttonNewRecipe);
+
             Controls.Add(textBoxRecipe);
+            Controls.Add(buttonSave);
             Controls.Add(labelLogin);
             Controls.Add(labelPassword);
             Controls.Add(labelUsername);
@@ -209,9 +214,7 @@
         private Label labelUsername;
         private Label labelPassword;
         private Label labelLogin;
-        private Button buttonNewRecipe;
-        private Button buttonEditRecipe;
-        private Button buttonClose;
+        private Button buttonSave;
         private RichTextBox textBoxRecipe;
     }
 }
