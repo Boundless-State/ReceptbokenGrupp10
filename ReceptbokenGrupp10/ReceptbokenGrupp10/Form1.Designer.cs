@@ -38,9 +38,9 @@
             textBoxPassword = new TextBox();
             labelUsername = new Label();
             labelPassword = new Label();
-            textBoxRecipe = new TextBox();
             labelLogin = new Label();
             buttonSave = new Button();
+            textBoxRecipe = new RichTextBox();
             SuspendLayout();
             // 
             // comboBoxCategory
@@ -130,15 +130,6 @@
             labelPassword.TabIndex = 11;
             labelPassword.Text = "Lösenord:";
             // 
-            // textBoxRecipe
-            // 
-            textBoxRecipe.Location = new Point(269, 102);
-            textBoxRecipe.Multiline = true;
-            textBoxRecipe.Name = "textBoxRecipe";
-            textBoxRecipe.ReadOnly = true;
-            textBoxRecipe.Size = new Size(761, 419);
-            textBoxRecipe.TabIndex = 12;
-            // 
             // labelLogin
             // 
             labelLogin.AutoSize = true;
@@ -159,12 +150,21 @@
             buttonSave.UseVisualStyleBackColor = true;
             buttonSave.Visible = false;
             // 
+            // textBoxRecipe
+            // 
+            textBoxRecipe.Location = new Point(269, 125);
+            textBoxRecipe.Name = "textBoxRecipe";
+            textBoxRecipe.ReadOnly = true;
+            textBoxRecipe.Size = new Size(761, 410);
+            textBoxRecipe.TabIndex = 15;
+            textBoxRecipe.Text = "";
+            // 
             // FormRecipe
             // 
             ClientSize = new Size(1042, 594);
+            Controls.Add(textBoxRecipe);
             Controls.Add(buttonSave);
             Controls.Add(labelLogin);
-            Controls.Add(textBoxRecipe);
             Controls.Add(labelPassword);
             Controls.Add(labelUsername);
             Controls.Add(textBoxPassword);
@@ -192,8 +192,8 @@
         private TextBox textBoxPassword;
         private Label labelUsername;
         private Label labelPassword;
-        private TextBox textBoxRecipe;
         private Label labelLogin;
         private Button buttonSave;
+        private RichTextBox textBoxRecipe;
     }
 }
