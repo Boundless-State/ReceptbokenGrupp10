@@ -73,11 +73,11 @@
             // 
             // textBoxRecipeTitle
             // 
-            textBoxRecipeTitle.Enabled = false;
             textBoxRecipeTitle.Font = new Font("Segoe UI", 14F);
             textBoxRecipeTitle.Location = new Point(269, 31);
             textBoxRecipeTitle.Name = "textBoxRecipeTitle";
             textBoxRecipeTitle.PlaceholderText = "Titel";
+            textBoxRecipeTitle.ReadOnly = true;
             textBoxRecipeTitle.Size = new Size(374, 39);
             textBoxRecipeTitle.TabIndex = 6;
             // 
@@ -135,7 +135,6 @@
             // 
             // textBoxRecipe
             // 
-            textBoxRecipe.Enabled = false;
             textBoxRecipe.Location = new Point(269, 132);
             textBoxRecipe.Name = "textBoxRecipe";
             textBoxRecipe.ReadOnly = true;
