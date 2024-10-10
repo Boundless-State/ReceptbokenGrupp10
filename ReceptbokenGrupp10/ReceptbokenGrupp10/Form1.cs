@@ -20,6 +20,7 @@ namespace ReceptbokenGrupp10
                 comboBoxCategory.Items.Add(category);
             }
 
+            Search();
         }
 
 
@@ -49,7 +50,17 @@ namespace ReceptbokenGrupp10
             }
         }
 
-        private void buttonSearch_Click(object sender, EventArgs e)
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            Search();
+        }
+
+        private void comboBoxCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Search();
+        }
+
+        public void Search()
         {
             string searchText = textBoxSearch.Text;
             string searchCategory = comboBoxCategory.Text;
@@ -72,7 +83,7 @@ namespace ReceptbokenGrupp10
             }
         }
 
-        
+
 
         //string searchText = textBoxSearch.Text;
         //string searchCategory = comboBoxCategory.Text;
@@ -104,13 +115,20 @@ namespace ReceptbokenGrupp10
 
 
 
-    //}
+        //}
 
         private void listBoxResult_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Recipe selectedRecipe = (Recipe)listBoxResult.SelectedItem;
-            textBoxRecipeTitle.Text = selectedRecipe.Title;
-            textBoxRecipe.Text = selectedRecipe.Description;
+            try
+            {
+                Recipe selectedRecipe = (Recipe)listBoxResult.SelectedItem;
+                textBoxRecipeTitle.Text = selectedRecipe.Title;
+                textBoxRecipe.Text = selectedRecipe.Description;
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
     }
 }

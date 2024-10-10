@@ -31,7 +31,6 @@
             comboBoxCategory = new ComboBox();
             textBoxSearch = new TextBox();
             listBoxResult = new ListBox();
-            buttonSearch = new Button();
             textBoxRecipeTitle = new TextBox();
             buttonLogIn = new Button();
             textBoxUser = new TextBox();
@@ -50,6 +49,7 @@
             comboBoxCategory.Name = "comboBoxCategory";
             comboBoxCategory.Size = new Size(225, 28);
             comboBoxCategory.TabIndex = 2;
+            comboBoxCategory.SelectedIndexChanged += comboBoxCategory_SelectedIndexChanged;
             // 
             // textBoxSearch
             // 
@@ -58,25 +58,16 @@
             textBoxSearch.PlaceholderText = "Sök";
             textBoxSearch.Size = new Size(225, 27);
             textBoxSearch.TabIndex = 3;
+            textBoxSearch.TextChanged += textBoxSearch_TextChanged;
             // 
             // listBoxResult
             // 
             listBoxResult.FormattingEnabled = true;
-            listBoxResult.Location = new Point(12, 171);
+            listBoxResult.Location = new Point(12, 131);
             listBoxResult.Name = "listBoxResult";
-            listBoxResult.Size = new Size(225, 364);
+            listBoxResult.Size = new Size(225, 404);
             listBoxResult.TabIndex = 4;
             listBoxResult.SelectedIndexChanged += listBoxResult_SelectedIndexChanged;
-            // 
-            // buttonSearch
-            // 
-            buttonSearch.Location = new Point(12, 125);
-            buttonSearch.Name = "buttonSearch";
-            buttonSearch.Size = new Size(94, 29);
-            buttonSearch.TabIndex = 5;
-            buttonSearch.Text = "Sök";
-            buttonSearch.UseVisualStyleBackColor = true;
-            buttonSearch.Click += buttonSearch_Click;
             // 
             // textBoxRecipeTitle
             // 
@@ -171,7 +162,6 @@
             Controls.Add(textBoxUser);
             Controls.Add(buttonLogIn);
             Controls.Add(textBoxRecipeTitle);
-            Controls.Add(buttonSearch);
             Controls.Add(listBoxResult);
             Controls.Add(textBoxSearch);
             Controls.Add(comboBoxCategory);
@@ -185,7 +175,6 @@
         private ComboBox comboBoxCategory;
         private TextBox textBoxSearch;
         private ListBox listBoxResult;
-        private Button buttonSearch;
         private TextBox textBoxRecipeTitle;
         private Button buttonLogIn;
         private TextBox textBoxUser;
