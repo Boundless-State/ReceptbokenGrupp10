@@ -30,11 +30,11 @@
         {
             labelTitle = new Label();
             textBoxTitle = new TextBox();
-            textBoxRecipe = new TextBox();
             labelDescription = new Label();
             labelCategory = new Label();
             comboBoxCategory = new ComboBox();
             buttonSave = new Button();
+            textBoxRecipe = new RichTextBox();
             SuspendLayout();
             // 
             // labelTitle
@@ -53,15 +53,6 @@
             textBoxTitle.PlaceholderText = "Titel";
             textBoxTitle.Size = new Size(407, 27);
             textBoxTitle.TabIndex = 1;
-            // 
-            // textBoxRecipe
-            // 
-            textBoxRecipe.Location = new Point(37, 138);
-            textBoxRecipe.Multiline = true;
-            textBoxRecipe.Name = "textBoxRecipe";
-            textBoxRecipe.PlaceholderText = "Skriv recept här...";
-            textBoxRecipe.Size = new Size(582, 339);
-            textBoxRecipe.TabIndex = 3;
             // 
             // labelDescription
             // 
@@ -98,15 +89,23 @@
             buttonSave.Text = "Spara";
             buttonSave.UseVisualStyleBackColor = true;
             // 
+            // textBoxRecipe
+            // 
+            textBoxRecipe.Location = new Point(37, 138);
+            textBoxRecipe.Name = "textBoxRecipe";
+            textBoxRecipe.Size = new Size(582, 356);
+            textBoxRecipe.TabIndex = 7;
+            textBoxRecipe.Text = "";
+            // 
             // FormNewRecipe
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(646, 554);
+            Controls.Add(textBoxRecipe);
             Controls.Add(buttonSave);
             Controls.Add(comboBoxCategory);
             Controls.Add(labelCategory);
-            Controls.Add(textBoxRecipe);
             Controls.Add(labelDescription);
             Controls.Add(textBoxTitle);
             Controls.Add(labelTitle);
@@ -120,10 +119,10 @@
 
         private Label labelTitle;
         private TextBox textBoxTitle;
-        private TextBox textBoxRecipe;
         private Label labelDescription;
         private Label labelCategory;
         private ComboBox comboBoxCategory;
         private Button buttonSave;
+        private RichTextBox textBoxRecipe;
     }
 }
