@@ -56,32 +56,55 @@ namespace ReceptbokenGrupp10
 
             listBoxResult.Items.Clear();
 
-            if (textBoxSearch.Text == null)
-            {
-                textBoxSearch.Text = "";
-
-            }
-
             foreach (Recipe recipe in recipeList)
             {
-                if (searchCategory == "")
+                if (string.IsNullOrEmpty(searchCategory))
                 {
                     if (recipe.Title.ToLower().Contains(searchText.ToLower()))
                     {
-                        listBoxResult.Items.Add(recipe);
-
+                        listBoxResult.Items.Add(recipe);  // Add full Recipe object
                     }
                 }
-                if (recipe.Category == searchCategory && recipe.Title.ToLower().Contains(searchText.ToLower()))
+                else if (recipe.Category == searchCategory && recipe.Title.ToLower().Contains(searchText.ToLower()))
                 {
-                    listBoxResult.Items.Add(recipe);
+                    listBoxResult.Items.Add(recipe);  // Add full Recipe object
                 }
-
             }
-
-
-
         }
+
+        
+
+        //string searchText = textBoxSearch.Text;
+        //string searchCategory = comboBoxCategory.Text;
+
+        //listBoxResult.Items.Clear();
+
+        //if (textBoxSearch.Text == null)
+        //{
+        //    textBoxSearch.Text = "";
+
+        //}
+
+        //foreach (Recipe recipe in recipeList)
+        //{
+        //    if (searchCategory == "")
+        //    {
+        //        if (recipe.Title.ToLower().Contains(searchText.ToLower()))
+        //        {
+        //            listBoxResult.Items.Add(recipe.Title);
+
+        //        }
+        //    }
+        //    if (recipe.Category == searchCategory && recipe.Title.ToLower().Contains(searchText.ToLower()))
+        //    {
+        //        listBoxResult.Items.Add(recipe.Title);
+        //    }
+
+        //}
+
+
+
+    //}
 
         private void listBoxResult_SelectedIndexChanged(object sender, EventArgs e)
         {

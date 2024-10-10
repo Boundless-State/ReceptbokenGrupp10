@@ -12,6 +12,11 @@ namespace ReceptbokenGrupp10.Classes
         public string Description { get; set; }
         public string Category { get; set; }
 
+
+        public override string ToString() //overide .title toString
+        {
+            return Title;
+        }
         public void Create(string title, string description, string category)
         {
 
