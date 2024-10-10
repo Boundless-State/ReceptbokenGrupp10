@@ -6,6 +6,7 @@ namespace ReceptbokenGrupp10
     {
         List<Recipe> recipeList = new List<Recipe>();
         Filehandler filehandler = new Filehandler();
+        string[] categories = { "Kött", "Fisk", "Sallad", "Soppa", "Dessert" };
 
         public FormRecipe()
         {
@@ -13,7 +14,7 @@ namespace ReceptbokenGrupp10
 
 
             recipeList = filehandler.ReadAllRecepies();
-            string[] categories = { "Kött", "Fisk", "Sallad", "Soppa", "Dessert" };
+            
 
             foreach (string category in categories)
             {
@@ -38,8 +39,9 @@ namespace ReceptbokenGrupp10
             {
                 labelLogin.Text = "Inloggning lyckades!";
                 labelLogin.ForeColor = Color.Green;
-                textBoxRecipe.ReadOnly = false;
-                buttonSave.Visible = true;
+                textBoxRecipe.ReadOnly = true;
+                buttonNewRecipe.Visible = true;
+                buttonEditRecipe.Visible = true;
 
                 //h�r l�gger vi in Visible = true p �samtliga funktioner och knappar som ska visas n�r man �r inloggad
             }
@@ -129,6 +131,27 @@ namespace ReceptbokenGrupp10
             {
 
             }
+        }
+
+
+        private void buttonNewRecipe_Click(object sender, EventArgs e)
+        {
+           
+
+        }
+
+
+        private void buttonEditRecipe_Click(object sender, EventArgs e)
+        {
+            Recipe selectedRecipe = (Recipe)listBoxResult.SelectedItem;
+            FormNewRecipe editRecipe = new FormNewRecipe(selectedRecipe, recipeList, categories);
+            editRecipe.Show();
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
         }
     }
 }
