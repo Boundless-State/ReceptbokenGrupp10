@@ -6,7 +6,7 @@ namespace ReceptbokenGrupp10
     {
         List<Recipe> recipeList = new List<Recipe>();
         Filehandler filehandler = new Filehandler();
-        string[] categories = { "Kött", "Fisk", "Sallad", "Soppa", "Dessert" };
+        List<string> categories = new List<string>();
 
         public FormRecipe()
         {
@@ -15,10 +15,13 @@ namespace ReceptbokenGrupp10
 
             recipeList = filehandler.ReadAllRecepies();
 
+            categories = GetAllCategories();
+
             foreach (string category in categories)
             {
                 comboBoxCategory.Items.Add(category);
             }
+            
 
             Search();
         }
@@ -151,5 +154,23 @@ namespace ReceptbokenGrupp10
                 }
             }
         }
+
+        public List<string> GetAllCategories()
+        {
+            List <string> categories = new List<string>();
+
+
+            foreach (Recipe recipe in recipeList)
+            {
+                if (!categories.Contains(recipe.Category))
+                {
+                    categories.Add(recipe.Category);
+                }
+
+            }
+
+            return categories;
+        }
     }
+    
 }

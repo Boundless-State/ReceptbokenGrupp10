@@ -15,7 +15,7 @@ namespace ReceptbokenGrupp10
     {
 
         private List<Recipe> _recipeList;
-        public FormNewRecipe(Recipe newRecipe, List<Recipe> recipeList, string[] categories)
+        public FormNewRecipe(Recipe newRecipe, List<Recipe> recipeList, List<string> categories)
         {
             InitializeComponent();
             Recipe recipe = new Recipe();
@@ -38,7 +38,7 @@ namespace ReceptbokenGrupp10
 
         }
 
-        public FormNewRecipe(List<Recipe> recipeList, string[] categories)
+        public FormNewRecipe(List<Recipe> recipeList, List<string> categories)
         {
             InitializeComponent();
             
