@@ -139,6 +139,7 @@ namespace ReceptbokenGrupp10
             Recipe selectedRecipe = (Recipe)listBoxResult.SelectedItem;
             FormNewRecipe newRecipe = new FormNewRecipe(recipeList, categories);
             newRecipe.ShowDialog();
+            UpdateUI();
         }
 
         private void buttonEditRecipe_Click(object sender, EventArgs e)
@@ -211,6 +212,26 @@ namespace ReceptbokenGrupp10
 
             return categories;
         }
+        
+        public void UpdateUI()
+        {
+            categories = GetAllCategories();
+
+            comboBoxCategory.Items.Clear();
+            foreach (string category in categories)
+            {
+                comboBoxCategory.Items.Add(category);
+            }
+
+            listBoxResult.Items.Clear();
+            Search();
+
+
+        }
+    
+    
     }
+
+
     
 }
