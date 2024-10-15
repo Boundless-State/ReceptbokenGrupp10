@@ -198,6 +198,7 @@ namespace ReceptbokenGrupp10
         {
             List <string> categories = new List<string>();
 
+            categories.Add("Alla");
 
             foreach (Recipe recipe in recipeList)
             {
