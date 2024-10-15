@@ -6,8 +6,11 @@ namespace ReceptbokenGrupp10
     {
         List<Recipe> recipeList = new List<Recipe>();
         Filehandler filehandler = new Filehandler();
+
+        string[] categories = { "Alla", "Kött", "Fisk", "Sallad", "Soppa", "Dessert" };
+
         ErrorLogger errorLogger = new ErrorLogger();
-        string[] categories = { "Kött", "Fisk", "Sallad", "Soppa", "Dessert" };
+
 
         public FormRecipe()
         {
@@ -82,9 +85,10 @@ namespace ReceptbokenGrupp10
 
                 listBoxResult.Items.Clear();
 
-                foreach (Recipe recipe in recipeList)
-                {
-                    if (string.IsNullOrEmpty(searchCategory))
+
+            foreach (Recipe recipe in recipeList)
+            {
+                if (string.IsNullOrEmpty(searchCategory) || searchCategory == "Alla")
                     {
                         if (recipe.Title.ToLower().Contains(searchText.ToLower()))
                         {

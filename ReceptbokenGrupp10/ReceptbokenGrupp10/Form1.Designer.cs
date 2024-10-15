@@ -52,6 +52,7 @@
             comboBoxCategory.Name = "comboBoxCategory";
             comboBoxCategory.Size = new Size(225, 28);
             comboBoxCategory.TabIndex = 2;
+            comboBoxCategory.Text = "Alla";
             comboBoxCategory.SelectedIndexChanged += comboBoxCategory_SelectedIndexChanged;
             // 
             // textBoxSearch
