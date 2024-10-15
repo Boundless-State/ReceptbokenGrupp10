@@ -6,6 +6,7 @@ namespace ReceptbokenGrupp10
     {
         List<Recipe> recipeList = new List<Recipe>();
         Filehandler filehandler = new Filehandler();
+        ErrorLogger errorLogger = new ErrorLogger();
         string[] categories = { "Kött", "Fisk", "Sallad", "Soppa", "Dessert" };
 
         public FormRecipe()
@@ -32,24 +33,34 @@ namespace ReceptbokenGrupp10
             string correctUsername = "Admin";
             string correctPassword = "Password";
 
-
-
-            if (enteredUsername == correctUsername && enteredPassword == correctPassword)
+            try
             {
-                labelLogin.Text = "Inloggning lyckades!";
-                labelLogin.ForeColor = Color.Green;
-                textBoxRecipe.ReadOnly = false;
-                buttonNewRecipe.Visible = true;
-                buttonEditRecipe.Visible = true;
-                buttonDeleteRecipe.Visible = true;
+                if (enteredUsername == correctUsername && enteredPassword == correctPassword)
+                {
+                    labelLogin.Text = "Inloggning lyckades!";
+                    labelLogin.ForeColor = Color.Green;
+                    textBoxRecipe.ReadOnly = false;
+                    buttonNewRecipe.Visible = true;
+                    buttonEditRecipe.Visible = true;
+                    buttonDeleteRecipe.Visible = true;
 
-                //h�r l�gger vi in Visible = true p �samtliga funktioner och knappar som ska visas n�r man �r inloggad
+                    //h�r l�gger vi in Visible = true p �samtliga funktioner och knappar som ska visas n�r man �r inloggad
+                }
+                else
+                {
+                    labelLogin.Text = "Inloggning misslyckades";
+                    labelLogin.ForeColor = Color.Red;
+                }
+
             }
-            else
+            catch (Exception ex)
             {
-                labelLogin.Text = "Inloggning misslyckades";
-                labelLogin.ForeColor = Color.Red;
+
+                Console.WriteLine($"Login Error: {ex.Message}");
+                errorLogger.LogCustomError(ex);
             }
+
+            
         }
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
@@ -64,25 +75,36 @@ namespace ReceptbokenGrupp10
 
         public void Search()
         {
-            string searchText = textBoxSearch.Text;
-            string searchCategory = comboBoxCategory.Text;
-
-            listBoxResult.Items.Clear();
-
-            foreach (Recipe recipe in recipeList)
+            try
             {
-                if (string.IsNullOrEmpty(searchCategory))
+                string searchText = textBoxSearch.Text;
+                string searchCategory = comboBoxCategory.Text;
+
+                listBoxResult.Items.Clear();
+
+                foreach (Recipe recipe in recipeList)
                 {
-                    if (recipe.Title.ToLower().Contains(searchText.ToLower()))
+                    if (string.IsNullOrEmpty(searchCategory))
+                    {
+                        if (recipe.Title.ToLower().Contains(searchText.ToLower()))
+                        {
+                            listBoxResult.Items.Add(recipe);  // Add full Recipe object
+                        }
+                    }
+                    else if (recipe.Category == searchCategory && recipe.Title.ToLower().Contains(searchText.ToLower()))
                     {
                         listBoxResult.Items.Add(recipe);  // Add full Recipe object
                     }
                 }
-                else if (recipe.Category == searchCategory && recipe.Title.ToLower().Contains(searchText.ToLower()))
-                {
-                    listBoxResult.Items.Add(recipe);  // Add full Recipe object
-                }
+
             }
+            catch (Exception s)
+            {
+
+                Console.WriteLine($"Search error: {s.Message}" );
+                errorLogger.LogCustomError(s);
+            }
+            
         }
 
         private void listBoxResult_SelectedIndexChanged(object sender, EventArgs e)
@@ -96,8 +118,10 @@ namespace ReceptbokenGrupp10
                 buttonEditRecipe.Enabled = true;
                 buttonDeleteRecipe.Enabled = true;
             }
-            catch (Exception ex)
+            catch (Exception i)
             {
+                Console.WriteLine($"Invalid seleted index {i.Message}");
+                errorLogger.LogCustomError(i);
 
             }
         }
@@ -123,33 +147,43 @@ namespace ReceptbokenGrupp10
 
         private void buttonDeleteRecipe_Click(object sender, EventArgs e)
         {
-            
-            // Kontrollera att ett recept är valt i listBox
-            if (listBoxResult.SelectedItem != null)
+            try
             {
-                
-                Recipe selectedRecipe = (Recipe)listBoxResult.SelectedItem;
-
-                
-                DialogResult dialogResult = MessageBox.Show(
-                    $"Är du säker på att du vill ta bort receptet '{selectedRecipe.Title}'?",
-                    "Bekräfta borttagning",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Warning);
-
-                
-                if (dialogResult == DialogResult.Yes)
+                // Kontrollera att ett recept är valt i listBox
+                if (listBoxResult.SelectedItem != null)
                 {
-                    
-                    recipeList.Remove(selectedRecipe);
-                    Filehandler filehandler = new Filehandler();
-                    filehandler.WriteToFile(recipeList);
-                    listBoxResult.Items.Remove(selectedRecipe);
 
-                    // Eventuell feedback till användaren om att borttagningen lyckades
-                    MessageBox.Show("Receptet har tagits bort.", "Borttagning klar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Recipe selectedRecipe = (Recipe)listBoxResult.SelectedItem;
+
+
+                    DialogResult dialogResult = MessageBox.Show(
+                        $"Är du säker på att du vill ta bort receptet '{selectedRecipe.Title}'?",
+                        "Bekräfta borttagning",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Warning);
+
+
+                    if (dialogResult == DialogResult.Yes)
+                    {
+
+                        recipeList.Remove(selectedRecipe);
+                        Filehandler filehandler = new Filehandler();
+                        filehandler.WriteToFile(recipeList);
+                        listBoxResult.Items.Remove(selectedRecipe);
+
+                        // Eventuell feedback till användaren om att borttagningen lyckades
+                        MessageBox.Show("Receptet har tagits bort.", "Borttagning klar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
+
             }
+            catch (Exception d)
+            {
+                Console.WriteLine($"Delete error {d.Message}");
+                errorLogger.LogCustomError(d);
+            }
+           
+           
         }
     }
 }
