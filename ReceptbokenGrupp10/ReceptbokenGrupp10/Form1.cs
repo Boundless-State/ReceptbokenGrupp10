@@ -208,6 +208,7 @@ namespace ReceptbokenGrupp10
         public void UpdateUI()
         {
             categories = GetAllCategories();
+            categories.Sort();
             recipeList = recipeList.OrderBy(recipe => recipe.Title).ToList();
 
             comboBoxCategory.Items.Clear();

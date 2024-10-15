@@ -38,5 +38,15 @@
     "Message": "Value cannot be null. (Parameter \u0027path\u0027)",
     "StackTrace": "   at System.ArgumentNullException.Throw(String paramName)\r\n   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)\r\n   at System.ArgumentException.ThrowNullOrEmptyException(String argument, String paramName)\r\n   at System.IO.StreamWriter.ValidateArgsAndOpenPath(String path, Boolean append, Encoding encoding, Int32 bufferSize)\r\n   at System.IO.StreamWriter..ctor(String path, Boolean append)\r\n   at ReceptbokenGrupp10.Classes.Filehandler.WriteToFile(List\u00601 recipes) in C:\\Users\\JeJAZ\\Source\\Repos\\ReceptbokenGrupp10\\ReceptbokenGrupp10\\ReceptbokenGrupp10\\Classes\\FIlehandler.cs:line 34",
     "Timestamp": "2024-10-10T14:34:45.7844258+02:00"
+  },
+  {
+    "Message": "Object reference not set to an instance of an object.",
+    "StackTrace": "   at ReceptbokenGrupp10.FormRecipe.listBoxResult_SelectedIndexChanged(Object sender, EventArgs e) in C:\\Users\\marcu\\source\\repos\\ProgCSharp\\ReceptbokenGrupp10\\ReceptbokenGrupp10\\ReceptbokenGrupp10\\Form1.cs:line 115",
+    "Timestamp": "2024-10-15T11:25:43.4058441+02:00"
+  },
+  {
+    "Message": "Object reference not set to an instance of an object.",
+    "StackTrace": "   at ReceptbokenGrupp10.FormRecipe.listBoxResult_SelectedIndexChanged(Object sender, EventArgs e) in C:\\Users\\marcu\\source\\repos\\ProgCSharp\\ReceptbokenGrupp10\\ReceptbokenGrupp10\\ReceptbokenGrupp10\\Form1.cs:line 115",
+    "Timestamp": "2024-10-15T11:25:48.485198+02:00"
   }
 ]
