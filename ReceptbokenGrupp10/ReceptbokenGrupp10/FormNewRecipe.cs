@@ -15,8 +15,11 @@ namespace ReceptbokenGrupp10
     {
 
         private List<Recipe> _recipeList;
+
         ErrorLogger errorLogger = new ErrorLogger();
-        public FormNewRecipe(Recipe newRecipe, List<Recipe> recipeList, string[] categories)
+
+        public FormNewRecipe(Recipe newRecipe, List<Recipe> recipeList, List<string> categories)
+
         {
             try
             {
@@ -48,7 +51,7 @@ namespace ReceptbokenGrupp10
 
         }
 
-        public FormNewRecipe(List<Recipe> recipeList, string[] categories)
+        public FormNewRecipe(List<Recipe> recipeList, List<string> categories)
         {
             InitializeComponent();
             
