@@ -17,22 +17,5 @@ namespace ReceptbokenGrupp10.Classes
         {
             return Title;
         }
-        public void Create(string title, string description, string category)
-        {
-
-        }
-
-        public void Update(string title, string description, string category)
-        {
-
-        }
-
-        public void Delete()
-        {
-
-        }
-
-        
-
     }
 }

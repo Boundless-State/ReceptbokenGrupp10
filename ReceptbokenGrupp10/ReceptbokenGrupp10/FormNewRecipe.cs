@@ -15,23 +15,36 @@ namespace ReceptbokenGrupp10
     {
 
         private List<Recipe> _recipeList;
+
+        ErrorLogger errorLogger = new ErrorLogger();
+
         public FormNewRecipe(Recipe newRecipe, List<Recipe> recipeList, List<string> categories)
+
         {
-            InitializeComponent();
-            Recipe recipe = new Recipe();
-            recipe = newRecipe;
-            _recipeList = recipeList;
-            textBoxTitle.Text = recipe.Title;
-            textBoxRecipe.Text = recipe.Description;
-            comboBoxCategory.Text = recipe.Category;
-
-            foreach (string category in categories)
+            try
             {
-                comboBoxCategory.Items.Add(category);
+                InitializeComponent();
+                Recipe recipe = new Recipe();
+                recipe = newRecipe;
+                _recipeList = recipeList;
+                textBoxTitle.Text = recipe.Title;
+                textBoxRecipe.Text = recipe.Description;
+                comboBoxCategory.Text = recipe.Category;
 
+                foreach (string category in categories)
+                {
+                    comboBoxCategory.Items.Add(category);
+
+                }
+
+                recipeList.Remove(recipe);
             }
-
-            recipeList.Remove(recipe);
+            catch (Exception t)
+            {
+                Console.WriteLine($"Initialize Component error {t.Message}");
+                errorLogger.LogCustomError(t);
+            }
+        
 
 
 
@@ -55,16 +68,27 @@ namespace ReceptbokenGrupp10
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            Recipe newRecipe = new Recipe();
-            Filehandler filehandler = new Filehandler();
-            newRecipe.Title = textBoxTitle.Text;
-            newRecipe.Description = textBoxRecipe.Text;
-            newRecipe.Category = comboBoxCategory.Text;
+            try
+            {
+                Recipe newRecipe = new Recipe();
+                Filehandler filehandler = new Filehandler();
+                newRecipe.Title = textBoxTitle.Text;
+                newRecipe.Description = textBoxRecipe.Text;
+                newRecipe.Category = comboBoxCategory.Text;
 
-            _recipeList.Add(newRecipe);
-            filehandler.WriteToFile(_recipeList);
+                _recipeList.Add(newRecipe);
+                filehandler.WriteToFile(_recipeList);
 
-            this.Close();
+                this.Close();
+
+            }
+            catch (Exception s)
+            {
+                Console.WriteLine($"Save error {s.Message}");
+                errorLogger.LogCustomError(s);
+
+            }
+            
         }
     }
 }
