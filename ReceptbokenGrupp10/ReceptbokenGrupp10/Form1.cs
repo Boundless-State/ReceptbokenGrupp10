@@ -17,18 +17,9 @@ namespace ReceptbokenGrupp10
         {
             InitializeComponent();
 
-
             recipeList = filehandler.ReadAllRecepies();
 
-            categories = GetAllCategories();
-
-            foreach (string category in categories)
-            {
-                comboBoxCategory.Items.Add(category);
-            }
-            
-
-            Search();
+            UpdateUI();
         }
 
 
@@ -217,6 +208,7 @@ namespace ReceptbokenGrupp10
         public void UpdateUI()
         {
             categories = GetAllCategories();
+            recipeList = recipeList.OrderBy(recipe => recipe.Title).ToList();
 
             comboBoxCategory.Items.Clear();
             foreach (string category in categories)
