@@ -147,6 +147,7 @@ namespace ReceptbokenGrupp10
             Recipe selectedRecipe = (Recipe)listBoxResult.SelectedItem;
             FormNewRecipe editRecipe = new FormNewRecipe(selectedRecipe, recipeList, categories);
             editRecipe.ShowDialog();
+            UpdateUI();
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
