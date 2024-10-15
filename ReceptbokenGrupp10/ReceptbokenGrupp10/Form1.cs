@@ -6,7 +6,7 @@ namespace ReceptbokenGrupp10
     {
         List<Recipe> recipeList = new List<Recipe>();
         Filehandler filehandler = new Filehandler();
-        string[] categories = { "Kött", "Fisk", "Sallad", "Soppa", "Dessert" };
+        string[] categories = { "Alla", "Kött", "Fisk", "Sallad", "Soppa", "Dessert" };
 
         public FormRecipe()
         {
@@ -71,7 +71,7 @@ namespace ReceptbokenGrupp10
 
             foreach (Recipe recipe in recipeList)
             {
-                if (string.IsNullOrEmpty(searchCategory))
+                if (string.IsNullOrEmpty(searchCategory) || searchCategory == "Alla")
                 {
                     if (recipe.Title.ToLower().Contains(searchText.ToLower()))
                     {
